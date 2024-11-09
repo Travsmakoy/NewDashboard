@@ -31,10 +31,18 @@ public class MainMethods {
     }
     public void click(By locator){
         WebElement click = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        System.out.println("Clicking "+click.getText());
         click.click();
     }
     public void URLvalidator(String value){
         Assert.assertEquals(driver.getCurrentUrl(),value);
         System.out.println("You are in correct URL "+value);
+    }
+    public void getUrl(String value) {
+        driver.get(value);
+    }
+    public void clickandsend(By locator, String value){
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(value);
+        System.out.println("Entered "+value);
     }
 }
