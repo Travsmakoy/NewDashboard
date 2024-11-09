@@ -1,3 +1,4 @@
+import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 
 public class MainMethods {
+
     protected static WebDriverWait wait;
     protected static WebDriver driver;
 
@@ -18,7 +20,7 @@ public class MainMethods {
     public void setUpSuite() {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
     @AfterSuite
     public void tearDownSuite() throws InterruptedException {
@@ -42,7 +44,10 @@ public class MainMethods {
         driver.get(value);
     }
     public void clickandsend(By locator, String value){
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(value);
+        WebElement clickandsending = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        clickandsending.click();
+        clickandsending.sendKeys(value);
+//        wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(value);
 //        System.out.println("Entered "+value);
     }
     public void SwitchTab(int num){
@@ -60,4 +65,11 @@ public class MainMethods {
 //     error.click();
     System.out.println(error.getText());
     }
+    public void doubleClick(By locator,By locator1){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
+        WebElement click2 = wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
+        String holder2 = click2.getText();
+        click2.click();
+    }
+
 }

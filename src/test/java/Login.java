@@ -24,4 +24,9 @@ public class Login extends MainMethods {
         clickandsend(By.xpath("//input[@id=\":r1:\"]"),"mark");
         click(By.xpath("//button[normalize-space()=\"Sign In\"]"));
     }
+    @Test(priority = 5)
+    public void BrowserBackToAqary() throws InterruptedException {
+        Thread.sleep(15000);
+        driver.navigate().back();
+    }
 }
