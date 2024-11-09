@@ -20,7 +20,7 @@ public class MainMethods {
     public void setUpSuite() {
         driver = new EdgeDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(50));
     }
     @AfterSuite
     public void tearDownSuite() throws InterruptedException {
@@ -50,5 +50,10 @@ public class MainMethods {
     public void SwitchTab(int num){
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(num));
+    }
+    public void clearfield(By locator){
+        WebElement clear = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        clear.click();
+        clear.clear();
     }
 }
