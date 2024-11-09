@@ -31,19 +31,19 @@ public class MainMethods {
     }
     public void click(By locator){
         WebElement click = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        System.out.println("Clicking "+click.getText());
+//        System.out.println("Clicking "+click.getText());
         click.click();
     }
     public void URLvalidator(String value){
         Assert.assertEquals(driver.getCurrentUrl(),value);
-        System.out.println("You are in correct URL "+value);
+//        System.out.println("You are in correct URL "+value);
     }
     public void getUrl(String value) {
         driver.get(value);
     }
     public void clickandsend(By locator, String value){
         wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(value);
-        System.out.println("Entered "+value);
+//        System.out.println("Entered "+value);
     }
     public void SwitchTab(int num){
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
@@ -51,7 +51,7 @@ public class MainMethods {
     }
     public void clearfield(By locator){
         WebElement clear = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        System.out.println(clear.getText());
+//        System.out.println(clear.getText());
         clear.click();
         clear.clear();
     }
