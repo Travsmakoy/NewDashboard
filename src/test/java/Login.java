@@ -5,6 +5,7 @@ public class Login extends MainMethods {
     @Test(priority = 1)
     public void Login() {
         click(By.xpath("//button[normalize-space()=\"Sign In\"]"));
+        errorValidator();
     }
     @Test(priority = 2)
     public void EnterInvalidUser() throws InterruptedException {

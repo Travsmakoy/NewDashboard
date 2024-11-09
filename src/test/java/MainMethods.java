@@ -55,4 +55,9 @@ public class MainMethods {
         clear.click();
         clear.clear();
     }
+    public void errorValidator(){
+     WebElement error = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("MuiFormHelperText-root Mui-error")));
+     error.click();
+     error.getText();
+    }
 }
