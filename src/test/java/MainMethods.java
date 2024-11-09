@@ -21,13 +21,13 @@ public class MainMethods {
     public void setUpSuite() {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
     @AfterSuite
     public void tearDownSuite() throws InterruptedException {
         // Quit the WebDriver instance
         if (driver != null) {
-            Thread.sleep(2000);
+            Thread.sleep(2500);
             driver.quit();
             System.out.println("TEST DONE");
         }
@@ -54,6 +54,7 @@ public class MainMethods {
     }
     public void clearfield(By locator){
         WebElement clear = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        System.out.println(clear.getText());
         clear.click();
         clear.clear();
     }

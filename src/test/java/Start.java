@@ -12,8 +12,4 @@ public class Start extends MainMethods{
         click(By.xpath("/html/body/div/a/button"));
         URLvalidator("http://192.168.1.138:8080/login?next=http%3A%2F%2Flocalhost%3A8080%2Fdashboard");
     }
-//    @Test
-//    public void switchtab(){
-//        SwitchTab(0);
-//    }
 }

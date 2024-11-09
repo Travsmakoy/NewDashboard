@@ -4,7 +4,7 @@
     <test name="Test">
         <classes>
             <class name="Start"/>
-            <class name="Login"></class>
+            <class name="Login"/>
         </classes>
     </test>
 </suite>
