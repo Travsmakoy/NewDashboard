@@ -7,8 +7,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.ArrayList;
 
 public class MainMethods {
     protected static WebDriverWait wait;
@@ -18,7 +20,7 @@ public class MainMethods {
     public void setUpSuite() {
         driver = new EdgeDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
     @AfterSuite
     public void tearDownSuite() throws InterruptedException {
@@ -44,5 +46,9 @@ public class MainMethods {
     public void clickandsend(By locator, String value){
         wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(value);
         System.out.println("Entered "+value);
+    }
+    public void SwitchTab(int num){
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(num));
     }
 }
