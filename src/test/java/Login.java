@@ -14,7 +14,7 @@ public class Login extends MainMethods {
         click(By.xpath("//button[normalize-space()=\"Sign In\"]"));
     }
     @Test (priority = 3)
-    public void clear() throws InterruptedException {
+    public void ClearField() throws InterruptedException {
         clearfield(By.xpath("(//input[@id=':r0:'])[1]"));
         clearfield(By.xpath("(//input[@id=':r1:'])[1]"));
     }
