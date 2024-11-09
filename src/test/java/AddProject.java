@@ -14,7 +14,7 @@ public class AddProject extends MainMethods{
         clickandsend(By.name("license_no"),"License-12312312312");
         clickandsend(By.name("project_no"),"ProjectNo-12321321321");
         clickandsend(By.name("starting_price"),"12312312321321");
-        doubleClick(By.xpath("//input[@id=':R2ldala59uuul9vcq:']"),By.xpath("//li[@id='R2ldala59uuul9vcq-option-0']"));
+        doubleClick(By.xpath("//input[@placeholder='Select Country']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
 
     }
 }

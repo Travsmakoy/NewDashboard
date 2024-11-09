@@ -71,5 +71,4 @@ public class MainMethods {
         String holder2 = click2.getText();
         click2.click();
     }
-
 }
