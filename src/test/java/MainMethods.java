@@ -56,8 +56,8 @@ public class MainMethods {
         clear.clear();
     }
     public void errorValidator(){
-     WebElement error = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("MuiFormHelperText-root Mui-error")));
-     error.click();
-     error.getText();
+     WebElement error = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained mui-1wvgvb1")));
+//     error.click();
+    System.out.println(error.getText());
     }
 }
