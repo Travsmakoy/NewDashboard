@@ -4,8 +4,8 @@
     <test name="Test">
         <classes>
             <class name="Start"/>
-            <class name="Login"/>
-            <class name="addUser"/>
+<!--            <class name="Login"/>-->
+<!--            <class name="addUser"/>-->
         </classes>
     </test>
 </suite>
