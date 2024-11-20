@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,13 +28,20 @@ public class MainMethods {
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
     @AfterSuite
-    public void tearDownSuite() throws InterruptedException {
+    public void tearDownSuite() throws InterruptedException, IOException {
         // Quit the WebDriver instance
         if (driver != null) {
             Thread.sleep(2500);
             driver.quit();
             System.out.println("TEST DONE");
         }
+
+        // Command to open the command prompt in a specific directory and run Allure
+        String projectPath = "C:\\Users\\mark\\IdeaProjects\\Nejoum";
+        String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
+
+        // Execute the command
+        Runtime.getRuntime().exec(command);
     }
     public void click(By locator){
         WebElement click = wait.until(ExpectedConditions.elementToBeClickable(locator));
