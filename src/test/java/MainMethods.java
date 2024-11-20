@@ -12,6 +12,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainMethods {
 
@@ -20,8 +21,8 @@ public class MainMethods {
 
     @BeforeSuite
     public void setUpSuite() {
-        driver = new EdgeDriver();
-        driver.manage().window().maximize();
+        driver = new FirefoxDriver();
+//        driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
     @AfterSuite
@@ -72,5 +73,8 @@ public class MainMethods {
         WebElement click2 = wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
         String holder2 = click2.getText();
         click2.click();
+    }
+    public void FieldValidator(){
+        List<WebElement> validator = driver.findElements(By.cssSelector("MuiFormHelperText-root Mui-error"));
     }
 }
