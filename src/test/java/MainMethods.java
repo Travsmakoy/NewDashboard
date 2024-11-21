@@ -24,8 +24,8 @@ public class MainMethods {
 
     @BeforeSuite
     public void setUpSuite() {
-        driver = new FirefoxDriver();
-//        driver.manage().window().maximize();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
     @AfterSuite
@@ -36,19 +36,19 @@ public class MainMethods {
             driver.quit();
             System.out.println("TEST DONE");
         }
-        String projectPath = "C:\\Users\\mark\\IdeaProjects\\NewestDashboard";
-        String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
-        Runtime.getRuntime().exec(command);
+        //--------ALLURE REPORT------
+//        String projectPath = "C:\\Users\\mark\\IdeaProjects\\NewestDashboard";
+//        String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
+//        Runtime.getRuntime().exec(command);
     }
     public void click(By locator){
         WebElement click = wait.until(ExpectedConditions.elementToBeClickable(locator));
-//        System.out.println("Clicking "+click.getText());
         click.click();
         Allure.step("Clicked "+click.getText());
     }
     public void URLvalidator(String value){
         Assert.assertEquals(driver.getCurrentUrl(),value);
-//        System.out.println("You are in correct URL "+value);
+        Allure.step("You are in correct URL "+value);
     }
     public void getUrl(String value) {
         driver.get(value);
@@ -57,8 +57,6 @@ public class MainMethods {
         WebElement clickandsending = wait.until(ExpectedConditions.elementToBeClickable(locator));
         clickandsending.click();
         clickandsending.sendKeys(value);
-//        wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(value);
-//        System.out.println("Entered "+value);
         Allure.step("Input "+value );
     }
     public void SwitchTab(int num){
@@ -67,14 +65,12 @@ public class MainMethods {
     }
     public void clearfield(By locator){
         WebElement clear = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-//        System.out.println(clear.getText());
         clear.click();
         clear.clear();
         Allure.step("Clearing The fields");
     }
     public void errorValidator(){
      WebElement error = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained mui-1wvgvb1")));
-//     error.click();
     System.out.println(error.getText());
     }
     public void doubleClick(By locator,By locator1){
@@ -83,12 +79,6 @@ public class MainMethods {
         String holder2 = click2.getText();
         click2.click();
     }
-//    public void FieldValidator(By locator){
-//        WebElement validator = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-//        validator.click();
-//        validator.getText();
-//        Assert.assertEquals(validator,"Missing Fields");
-//    }
     public void scrollPage(int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0," + pixels + ")", "");
