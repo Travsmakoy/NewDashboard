@@ -9,6 +9,13 @@ public class AddProject extends MainMethods{
         click(By.xpath("//span[normalize-space()=\"Add Project\"]"));
     }
     @Test(priority = 2)
+    public void CheckRequiredFields(){
+    scrollPage(6500);
+    click(By.xpath("/html/body/div[2]/main/form/div[7]/button[1]"));
+//    FieldValidator(By.xpath("//div[contains(text(),\"Missing fields\")]"));
+        InlineErrorValidator(By.xpath("//div[contains(text(),\\\"Missing fields\\\")]"),"Missing Fields");
+    }
+    @Test(priority = 3)
     public void AddProjectDetails(){
         clickandsend(By.name("project_name"),"FrontEndAutomation");
         clickandsend(By.name("license_no"),"License-12312312312");
@@ -20,5 +27,7 @@ public class AddProject extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select City']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select Sub Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        scrollPage(600);
+
     }
 }

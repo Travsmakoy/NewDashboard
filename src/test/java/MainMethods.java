@@ -1,5 +1,6 @@
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,9 +36,9 @@ public class MainMethods {
             driver.quit();
             System.out.println("TEST DONE");
         }
-//        String projectPath = "C:\\Users\\mark\\IdeaProjects\\NewestDashboard";
-//        String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
-//        Runtime.getRuntime().exec(command);
+        String projectPath = "C:\\Users\\mark\\IdeaProjects\\NewestDashboard";
+        String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
+        Runtime.getRuntime().exec(command);
     }
     public void click(By locator){
         WebElement click = wait.until(ExpectedConditions.elementToBeClickable(locator));
@@ -82,7 +83,20 @@ public class MainMethods {
         String holder2 = click2.getText();
         click2.click();
     }
-    public void FieldValidator(){
-        List<WebElement> validator = driver.findElements(By.cssSelector("MuiFormHelperText-root Mui-error"));
+//    public void FieldValidator(By locator){
+//        WebElement validator = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//        validator.click();
+//        validator.getText();
+//        Assert.assertEquals(validator,"Missing Fields");
+//    }
+    public void scrollPage(int pixels) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0," + pixels + ")", "");
+    }
+    public void InlineErrorValidator(By locator, String expectedValue) {
+        WebElement inlineError = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        String actual = inlineError.getText();
+        Assert.assertEquals(actual, expectedValue);
+        Allure.step(expectedValue+" REQUIRED FIELDS / TOAST Is showing");
     }
 }
