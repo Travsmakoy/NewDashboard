@@ -35,9 +35,9 @@ public class MainMethods {
             driver.quit();
             System.out.println("TEST DONE");
         }
-        String projectPath = "C:\\Users\\mark\\IdeaProjects\\NewestDashboard";
-        String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
-        Runtime.getRuntime().exec(command);
+//        String projectPath = "C:\\Users\\mark\\IdeaProjects\\NewestDashboard";
+//        String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
+//        Runtime.getRuntime().exec(command);
     }
     public void click(By locator){
         WebElement click = wait.until(ExpectedConditions.elementToBeClickable(locator));
