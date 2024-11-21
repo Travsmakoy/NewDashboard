@@ -31,22 +31,19 @@ public class MainMethods {
     public void tearDownSuite() throws InterruptedException, IOException {
         // Quit the WebDriver instance
         if (driver != null) {
-            Thread.sleep(2500);
+            Thread.sleep(3500);
             driver.quit();
             System.out.println("TEST DONE");
         }
-
-        // Command to open the command prompt in a specific directory and run Allure
-        String projectPath = "C:\\Users\\mark\\IdeaProjects\\Nejoum";
+        String projectPath = "C:\\Users\\mark\\IdeaProjects\\NewestDashboard";
         String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
-
-        // Execute the command
         Runtime.getRuntime().exec(command);
     }
     public void click(By locator){
         WebElement click = wait.until(ExpectedConditions.elementToBeClickable(locator));
 //        System.out.println("Clicking "+click.getText());
         click.click();
+        Allure.step("Clicked "+click.getText());
     }
     public void URLvalidator(String value){
         Assert.assertEquals(driver.getCurrentUrl(),value);
@@ -61,6 +58,7 @@ public class MainMethods {
         clickandsending.sendKeys(value);
 //        wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(value);
 //        System.out.println("Entered "+value);
+        Allure.step("Input "+value );
     }
     public void SwitchTab(int num){
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
@@ -71,6 +69,7 @@ public class MainMethods {
 //        System.out.println(clear.getText());
         clear.click();
         clear.clear();
+        Allure.step("Clearing The fields");
     }
     public void errorValidator(){
      WebElement error = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained mui-1wvgvb1")));
