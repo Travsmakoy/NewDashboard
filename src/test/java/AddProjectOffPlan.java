@@ -27,18 +27,20 @@ public class AddProjectOffPlan extends MainMethods{
     int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
-    String BuiltArea = String.valueOf(ThreadLocalRandom.current().nextInt(9999, 10000));
-    String plotArea = String.valueOf(ThreadLocalRandom.current().nextInt(10000, 10100));
+    String BuiltArea = String.valueOf(ThreadLocalRandom.current().nextInt(5000, 10000));
+    String plotArea = String.valueOf(ThreadLocalRandom.current().nextInt(6000, 10010));
     String noProperties = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
     String completionPercentage = String.valueOf(ThreadLocalRandom.current().nextInt(1, 100));
     String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
+    String randomPosition  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 41));
+
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
         clickandsend(By.name("project_name"),"PROJECTOFFPLAN" +projectNameDigits);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
-        doubleClick(By.xpath("//input[@placeholder='Developer company']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        doubleClick(By.xpath("//input[@placeholder='Developer company']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomPosition+"]"));
         doubleClick(By.xpath("//input[@placeholder='Select Country']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select State']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select City']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
