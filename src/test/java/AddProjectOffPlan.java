@@ -23,7 +23,7 @@ public class AddProjectOffPlan extends MainMethods{
 //    InlineErrorValidator(By.xpath("//div[contains(text(),\"Missing fields\")]"),"Missing Fields");
 //    scrollPage(-500);
 //    }
-    int projectNameDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    int projectNameDigits = ThreadLocalRandom.current().nextInt(1, 999999);
     int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
@@ -32,7 +32,7 @@ public class AddProjectOffPlan extends MainMethods{
     String noProperties = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
     String completionPercentage = String.valueOf(ThreadLocalRandom.current().nextInt(1, 100));
     String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
-    String randomPosition  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 41));
+    String randomPosition  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 15));
 
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
