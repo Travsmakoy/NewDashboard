@@ -1,14 +1,16 @@
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class AddProject extends MainMethods{
+import java.time.Duration;
+import java.util.Random;
 
+public class AddProject extends MainMethods{
+    String description = randomString(950);
     @Test(priority = 1)
     public void NavigateToNav(){
         click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
@@ -122,9 +124,54 @@ public class AddProject extends MainMethods{
     }
     @Test(priority = 4)
     public void Description() throws InterruptedException {
-        Thread.sleep(1);
-       click(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[1]/div/div/div"));
-       clickandsend(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[1]/div/div/div"),"asdasdasd");
+        setLargeTextValue(driver, By.id("description"), description);
+        setLargeTextValue(driver, By.id("description_arabic"), randomString(750));
+        click(By.xpath("//*[@id=\":R1adalah9uuul9vcq:\"]"));
 
+    }
+    public String randomString(int length) {
+        String symbols = "abcdefghijklmnopqrstuvwxyz123456789";
+        Random rnd = new Random();
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            str.append(symbols.charAt(rnd.nextInt(symbols.length())));
+        }
+        return str.toString();
+    }
+
+    private void setLargeTextValue(WebDriver driver, By locator, String text) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // Check if the element is editable
+        Boolean isEditable = (Boolean) js.executeScript(
+                "return arguments[0].matches(':not([readonly]):not([disabled])')",
+                element
+        );
+
+        if (!isEditable) {
+            throw new ElementNotInteractableException("Element is not editable");
+        }
+
+        // Set the value
+        js.executeScript("arguments[0].value = arguments[1];", element, text);
+
+        // Verify the value was set correctly
+        String actualValue = (String) js.executeScript("return arguments[0].value;", element);
+        if (!actualValue.equals(text)) {
+            throw new WebDriverException("Failed to set text. Expected: " + text + ", Actual: " + actualValue);
+        }
+
+        // Trigger input and change events
+        js.executeScript(
+                "var element = arguments[0];" +
+                        "var event = new Event('input', { bubbles: true });" +
+                        "element.dispatchEvent(event);" +
+                        "event = new Event('change', { bubbles: true });" +
+                        "element.dispatchEvent(event);",
+                element
+        );
     }
 }
