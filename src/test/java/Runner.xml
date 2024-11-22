@@ -7,7 +7,7 @@
             <class name="Login"/>
             <class name="AddProjectOffPlan"/>
             <class name="AddProjectReady"/>
-            <class name="AddPropertyOffplan"/>
+            <class name="ProjectOffPlanGallery"/>
         </classes>
     </test>
 </suite>

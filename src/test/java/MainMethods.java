@@ -26,7 +26,7 @@ public class MainMethods {
     @BeforeSuite
     public void setUpSuite() {
         driver = new EdgeDriver();
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
     @AfterSuite
