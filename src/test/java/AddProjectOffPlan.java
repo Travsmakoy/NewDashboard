@@ -23,9 +23,9 @@ public class AddProjectOffPlan extends MainMethods{
 //    InlineErrorValidator(By.xpath("//div[contains(text(),\"Missing fields\")]"),"Missing Fields");
 //    scrollPage(-500);
 //    }
-    int projectNameDigits = ThreadLocalRandom.current().nextInt(1000, 999999999);
-    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1000, 999999999);
-    int projectNoDigits = ThreadLocalRandom.current().nextInt(1000, 999999999);
+    int projectNameDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
     String BuiltArea = String.valueOf(ThreadLocalRandom.current().nextInt(9999, 10000));
     String plotArea = String.valueOf(ThreadLocalRandom.current().nextInt(10000, 10100));
@@ -34,7 +34,7 @@ public class AddProjectOffPlan extends MainMethods{
     String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
-        clickandsend(By.name("project_name"),"ProjectAutomationOffplan" +projectNameDigits);
+        clickandsend(By.name("project_name"),"PROJECTOFFPLAN" +projectNameDigits);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);

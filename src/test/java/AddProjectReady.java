@@ -11,7 +11,9 @@ import java.util.concurrent.ThreadLocalRandom;
 public class AddProjectReady extends MainMethods{
 
     @Test(priority = 1)
-    public void NavigateToNav(){
+    public void NavigateToNav() throws InterruptedException {
+        Thread.sleep(1000);
+//        click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
         click(By.xpath("//span[normalize-space()=\"Projects\"]"));
         click(By.xpath("//span[normalize-space()=\"Add Project\"]"));
     }
@@ -22,10 +24,10 @@ public class AddProjectReady extends MainMethods{
 //    InlineErrorValidator(By.xpath("//div[contains(text(),\"Missing fields\")]"),"Missing Fields");
 //    scrollPage(-500);
 //    }
-    int projectNameDigits = ThreadLocalRandom.current().nextInt(1000, 999999999);
-    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1000, 999999999);
-    int projectNoDigits = ThreadLocalRandom.current().nextInt(1000, 999999999);
-    String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
+    int projectNameDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(10000, 999999));
     String BuiltArea = String.valueOf(ThreadLocalRandom.current().nextInt(9999, 10000));
     String plotArea = String.valueOf(ThreadLocalRandom.current().nextInt(10000, 10100));
     String noProperties = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
@@ -33,7 +35,7 @@ public class AddProjectReady extends MainMethods{
     String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
-        clickandsend(By.name("project_name"),"ProjectAutomationReady" +projectNameDigits);
+        clickandsend(By.name("project_name"),"PROJECTREADY" +projectNameDigits);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
@@ -54,16 +56,14 @@ public class AddProjectReady extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select Furnished']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         clickandsend(By.name("no_of_properties"),noProperties);
         doubleClick(By.xpath("//input[@placeholder='Select Ownership']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[8]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[3]/button[1]"));
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[10]/div/div/div/div[2]/button"));
-        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[1]"));
-        click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[2]/button"));
-        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[5]/button[4]"));
-        Thread.sleep(250);
-        click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[12]/div/div/div/div[2]/button"));
-        click(By.xpath("//button[normalize-space()=\"29\"]"));
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[1]/div/div"),By.xpath("//li[normalize-space()=\"AED\"]"));
+        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[5]/button[7]"));
+        Thread.sleep(300);
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[5]/button[6]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[1]/div/div"),By.xpath("//li[normalize-space()=\"AED\"]"));
         clickandsend(By.name("service_charge"),ServiceCharge);
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
     }
     @Test(priority = 3)
     public void PoolyGoon() throws InterruptedException {
@@ -144,8 +144,7 @@ public class AddProjectReady extends MainMethods{
         scrollPage(500);
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[4]/ul/li[1]"));
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[5]/ul/li"));
-        scrollPage(1950);
-        Thread.sleep(100);
+        scrollPage(500);
         click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[4]/ul/li[1]"));
         click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[6]/ul/li[3]"));
         click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[9]/ul/li[1]"));
