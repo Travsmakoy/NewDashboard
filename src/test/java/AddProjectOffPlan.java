@@ -1,16 +1,15 @@
 import io.qameta.allure.Allure;
-import io.qameta.allure.Description;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
-public class AddProject extends MainMethods{
-    String description = randomString(950);
+public class AddProjectOffPlan extends MainMethods{
+
     @Test(priority = 1)
     public void NavigateToNav(){
         click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
@@ -24,12 +23,16 @@ public class AddProject extends MainMethods{
 //    InlineErrorValidator(By.xpath("//div[contains(text(),\"Missing fields\")]"),"Missing Fields");
 //    scrollPage(-500);
 //    }
+    int projectNameDigits = ThreadLocalRandom.current().nextInt(1000, 999999999);
+    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1000, 999999999);
+    int projectNoDigits = ThreadLocalRandom.current().nextInt(1000, 999999999);
+    String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
-        clickandsend(By.name("project_name"),"FrontEndAutomation");
-        clickandsend(By.name("license_no"),"License-12312312312");
-        clickandsend(By.name("project_no"),"ProjectNo-12321321321");
-        clickandsend(By.name("starting_price"),"12312312321321");
+        clickandsend(By.name("project_name"),"FRONTENDAUTOMATION" +projectNameDigits);
+        clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
+        clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
+        clickandsend(By.name("starting_price"),StartingPrice);
         doubleClick(By.xpath("//input[@placeholder='Developer company']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select Country']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select State']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
@@ -118,60 +121,31 @@ public class AddProject extends MainMethods{
         actions.moveByOffset(1, 1).click().perform();
         Allure.step("Completed the box selection");
         Thread.sleep(500);
-
         actions.release().perform();
-        scrollPage(900);
+        scrollPage(250);
     }
     @Test(priority = 4)
     public void Description() throws InterruptedException {
-        setLargeTextValue(driver, By.id("description"), description);
-        setLargeTextValue(driver, By.id("description_arabic"), randomString(750));
-        click(By.xpath("//*[@id=\":R1adalah9uuul9vcq:\"]"));
+        scrollPage(500);
+        String realEstateDescription = "This beautifully designed 2-bedroom apartment offers modern living with stunning views of the city skyline. Located in the heart of the vibrant downtown area, this apartment features spacious living areas, high-end finishes, and large windows that fill the space with natural light. The fully equipped kitchen boasts state-of-the-art appliances, while the master bedroom comes with an ensuite bathroom. Residents enjoy access to premium amenities, including a rooftop pool, fully equipped fitness center, and 24/7 security. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience";
+
+        WebElement descriptionField = driver.findElement(By.xpath("//textarea[@name='description']"));descriptionField.sendKeys(realEstateDescription);
 
     }
-    public String randomString(int length) {
-        String symbols = "abcdefghijklmnopqrstuvwxyz123456789";
-        Random rnd = new Random();
-        StringBuilder str = new StringBuilder();
-        for (int i = 0; i < length; i++) {
-            str.append(symbols.charAt(rnd.nextInt(symbols.length())));
-        }
-        return str.toString();
-    }
-
-    private void setLargeTextValue(WebDriver driver, By locator, String text) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        // Check if the element is editable
-        Boolean isEditable = (Boolean) js.executeScript(
-                "return arguments[0].matches(':not([readonly]):not([disabled])')",
-                element
-        );
-
-        if (!isEditable) {
-            throw new ElementNotInteractableException("Element is not editable");
-        }
-
-        // Set the value
-        js.executeScript("arguments[0].value = arguments[1];", element, text);
-
-        // Verify the value was set correctly
-        String actualValue = (String) js.executeScript("return arguments[0].value;", element);
-        if (!actualValue.equals(text)) {
-            throw new WebDriverException("Failed to set text. Expected: " + text + ", Actual: " + actualValue);
-        }
-
-        // Trigger input and change events
-        js.executeScript(
-                "var element = arguments[0];" +
-                        "var event = new Event('input', { bubbles: true });" +
-                        "element.dispatchEvent(event);" +
-                        "event = new Event('change', { bubbles: true });" +
-                        "element.dispatchEvent(event);",
-                element
-        );
+    @Test(priority = 5)
+    public void AmenitiesFacilities() throws InterruptedException {
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[1]/ul/li[2]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[2]/ul/li[3]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[3]/ul/li[1]"));
+        scrollPage(500);
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[4]/ul/li[1]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[5]/ul/li"));
+        scrollPage(1950);
+        Thread.sleep(100);
+        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[4]/ul/li[1]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[6]/ul/li[3]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[9]/ul/li[1]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[13]/ul/li[5]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[7]/button[1]"));
     }
 }
