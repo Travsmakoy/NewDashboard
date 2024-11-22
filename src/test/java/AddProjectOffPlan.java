@@ -30,7 +30,7 @@ public class AddProjectOffPlan extends MainMethods{
     }
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
-        clickandsend(By.name("project_name"),"PROJECTOFFPLAN" +projectNameDigits);
+        clickandsend(By.name("project_name"),"AUTOPROJECTOFFPLAN" +projectNameDigits);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);

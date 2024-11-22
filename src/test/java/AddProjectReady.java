@@ -39,7 +39,7 @@ public class AddProjectReady extends MainMethods{
 
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
-        clickandsend(By.name("project_name"),"PROJECTREADY" +projectNameDigits);
+        clickandsend(By.name("project_name"),"AUTOPROJECTREADY" +projectNameDigits);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
