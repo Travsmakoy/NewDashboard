@@ -8,15 +8,14 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class AddProjectOffPlan extends MainMethods{
+public class AddProjectReady extends MainMethods{
 
     @Test(priority = 1)
     public void NavigateToNav(){
-        click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
         click(By.xpath("//span[normalize-space()=\"Projects\"]"));
         click(By.xpath("//span[normalize-space()=\"Add Project\"]"));
     }
-//    @Test(priority = 2)
+    //    @Test(priority = 2)
 //    public void CheckRequiredFields(){
 //    scrollPage(6000);
 //    click(By.xpath("/html/body/div[2]/main/form/div[7]/button[1]"));
@@ -34,7 +33,7 @@ public class AddProjectOffPlan extends MainMethods{
     String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
-        clickandsend(By.name("project_name"),"ProjectAutomationOffplan" +projectNameDigits);
+        clickandsend(By.name("project_name"),"ProjectAutomationReady" +projectNameDigits);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
@@ -45,10 +44,10 @@ public class AddProjectOffPlan extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select Sub Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         scrollPage(800);
-        doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
-        clickandsend(By.name("completion_percentage"),completionPercentage);
-        click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[3]/div/div/div/div[2]/button"));
-        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[2]"));
+        doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=2]"));
+//        clickandsend(By.name("completion_percentage"),completionPercentage);
+//        click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[3]/div/div/div/div[2]/button"));
+//        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[2]"));
         doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         clickandsend(By.name("plot_area"),plotArea);
         clickandsend(By.name("built_up_area"),BuiltArea);

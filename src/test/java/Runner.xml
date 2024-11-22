@@ -5,7 +5,8 @@
         <classes>
             <class name="Start"/>
             <class name="Login"/>
-            <class name="AddProject"/>
+            <class name="AddProjectOffPlan"/>
+            <class name="AddProjectReady"></class>
         </classes>
     </test>
 </suite>
