@@ -33,6 +33,8 @@ public class AddProjectOffPlan extends MainMethods{
     String completionPercentage = String.valueOf(ThreadLocalRandom.current().nextInt(1, 100));
     String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
     String randomPosition  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 15));
+    String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 30));
+    String randomSub  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3));
 
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
@@ -44,8 +46,8 @@ public class AddProjectOffPlan extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select Country']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select State']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select City']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
-        doubleClick(By.xpath("//input[@placeholder='Select Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
-        doubleClick(By.xpath("//input[@placeholder='Select Sub Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        doubleClick(By.xpath("//input[@placeholder='Select Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomCom+"]"));
+        doubleClick(By.xpath("//input[@placeholder='Select Sub Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomSub+"]"));
         scrollPage(800);
         doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         clickandsend(By.name("completion_percentage"),completionPercentage);
