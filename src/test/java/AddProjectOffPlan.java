@@ -9,20 +9,6 @@ import org.testng.annotations.Test;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AddProjectOffPlan extends MainMethods{
-
-    @Test(priority = 1)
-    public void NavigateToNav(){
-        click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
-        click(By.xpath("//span[normalize-space()=\"Projects\"]"));
-        click(By.xpath("//span[normalize-space()=\"Add Project\"]"));
-    }
-//    @Test(priority = 2)
-//    public void CheckRequiredFields(){
-//    scrollPage(6000);
-//    click(By.xpath("/html/body/div[2]/main/form/div[7]/button[1]"));
-//    InlineErrorValidator(By.xpath("//div[contains(text(),\"Missing fields\")]"),"Missing Fields");
-//    scrollPage(-500);
-//    }
     int projectNameDigits = ThreadLocalRandom.current().nextInt(1, 999999);
     int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
@@ -36,6 +22,12 @@ public class AddProjectOffPlan extends MainMethods{
     String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 30));
     String randomSub  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3));
 
+    @Test(priority = 1)
+    public void NavigateToNav(){
+        click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
+        click(By.xpath("//span[normalize-space()=\"Projects\"]"));
+        click(By.xpath("//span[normalize-space()=\"Add Project\"]"));
+    }
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
         clickandsend(By.name("project_name"),"PROJECTOFFPLAN" +projectNameDigits);

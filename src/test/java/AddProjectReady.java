@@ -9,6 +9,18 @@ import org.testng.annotations.Test;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AddProjectReady extends MainMethods{
+    int projectNameDigits = ThreadLocalRandom.current().nextInt(1, 999999);
+    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
+    String BuiltArea = String.valueOf(ThreadLocalRandom.current().nextInt(5000, 10000));
+    String plotArea = String.valueOf(ThreadLocalRandom.current().nextInt(6000, 10010));
+    String noProperties = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
+    String completionPercentage = String.valueOf(ThreadLocalRandom.current().nextInt(1, 100));
+    String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
+    String randomPosition  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 15));
+    String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 30));
+    String randomSub  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3));
 
     @Test(priority = 1)
     public void NavigateToNav() throws InterruptedException {
@@ -24,18 +36,6 @@ public class AddProjectReady extends MainMethods{
 //    InlineErrorValidator(By.xpath("//div[contains(text(),\"Missing fields\")]"),"Missing Fields");
 //    scrollPage(-500);
 //    }
-    int projectNameDigits = ThreadLocalRandom.current().nextInt(1, 999999);
-    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
-    int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
-    String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
-    String BuiltArea = String.valueOf(ThreadLocalRandom.current().nextInt(5000, 10000));
-    String plotArea = String.valueOf(ThreadLocalRandom.current().nextInt(6000, 10010));
-    String noProperties = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
-    String completionPercentage = String.valueOf(ThreadLocalRandom.current().nextInt(1, 100));
-    String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
-    String randomPosition  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 15));
-    String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 30));
-    String randomSub  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3));
 
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
@@ -51,9 +51,6 @@ public class AddProjectReady extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select Sub Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomSub+"]"));
         scrollPage(800);
         doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=2]"));
-//        clickandsend(By.name("completion_percentage"),completionPercentage);
-//        click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[3]/div/div/div/div[2]/button"));
-//        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[2]"));
         doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         clickandsend(By.name("plot_area"),plotArea);
         clickandsend(By.name("built_up_area"),BuiltArea);
