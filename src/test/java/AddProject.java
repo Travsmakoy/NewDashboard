@@ -1,3 +1,4 @@
+import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -32,7 +33,7 @@ public class AddProject extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select City']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select Sub Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
-        scrollPage(1000);
+        scrollPage(800);
         doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         clickandsend(By.name("completion_percentage"),"50");
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[3]/div/div/div/div[2]/button"));
@@ -63,7 +64,7 @@ public class AddProject extends MainMethods{
         WebElement polygonButton = driver.findElement(By.xpath("//html[1]/body[1]/div[2]/main[1]/form[1]/div[2]/div[1]/div[2]/div[1]/div[6]/div[2]/div[1]/div[3]/div[4]/button[1]"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", polygonButton);
 
-        System.out.println("Clicked on the polygon icon");
+        Allure.step("Clicked on the polygon icon");
 
         Thread.sleep(500);
 
@@ -71,39 +72,48 @@ public class AddProject extends MainMethods{
 
         int mapWidth = mapContainer.getSize().getWidth();
         int mapHeight = mapContainer.getSize().getHeight();
-        int centerX = mapWidth / 2; // Calculate center X of the map
-        int centerY = mapHeight / 2; // Calculate center Y of the map
+        int centerX = mapWidth / 2;
+        int centerY = mapHeight / 2;
 
-        // Define the starting point coordinates (start from the center of the map)
-        int startX = centerX;  // Starting X offset at the center
-        int startY = centerY;  // Starting Y offset at the center
+// Define the box dimensions (in pixels)
+        int boxWidth = 100;  // Adjust as needed
+        int boxHeight = 100; // Adjust for a perfect square, or modify for rectangle
 
-        // Move to the start point and click to begin drawing the polygon
+// Calculate starting point (top-left corner of the box)
+        int startX = centerX - (boxWidth / 2);  // Center the box horizontally
+        int startY = centerY - (boxHeight / 2); // Center the box vertically
+
+// Move to starting point and begin drawing
         actions.moveByOffset(startX, startY).click().perform();
-        System.out.println("Clicked on the starting point");
+        Allure.step("Started at top-left corner");
         Thread.sleep(500);
 
-        // Draw to the second point (adjust xOffset and yOffset for the second point)
-        actions.moveByOffset(50, 30).click().perform();  // Second point (small distance)
-        System.out.println("Clicked on the second point");
+// Draw top edge
+        actions.moveByOffset(boxWidth, 0).click().perform();
+        Allure.step("Drew top edge");
         Thread.sleep(500);
 
-        // Draw to the third point (adjust xOffset and yOffset for the third point)
-        actions.moveByOffset(40, -30).click().perform();  // Third point (small distance)
-        System.out.println("Clicked on the third point");
+// Draw right edge
+        actions.moveByOffset(0, boxHeight).click().perform();
+        Allure.step("Drew right edge");
         Thread.sleep(500);
 
-        // Close the polygon by clicking back to the starting point
-        actions.moveByOffset(-90, 10).click().perform();  // Closing the polygon (return to start)
-        System.out.println("Clicked back on the starting point");
+// Draw bottom edge
+        actions.moveByOffset(-boxWidth, 0).click().perform();
+        Allure.step("Drew bottom edge");
         Thread.sleep(500);
 
-        // Final click to color/complete the polygon selection
-        actions.moveByOffset(-1, -1).click().perform();  // Small offset to trigger completion (final click)
-        System.out.println("Final click to color the polygon and complete the selection");
+// Close the box by returning to start
+        actions.moveByOffset(0, -boxHeight).click().perform();
+        Allure.step("Closed the box");
+        Thread.sleep(500);
+
+// Final click to complete the selection
+        actions.moveByOffset(1, 1).click().perform();
+        Allure.step("Completed the box selection");
         Thread.sleep(500);
 
         actions.release().perform();
-
+        scrollPage(900);
     }
 }
