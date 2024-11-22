@@ -1,4 +1,5 @@
 import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -51,6 +52,9 @@ public class AddProject extends MainMethods{
         Thread.sleep(250);
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[12]/div/div/div/div[2]/button"));
         click(By.xpath("//button[normalize-space()=\"29\"]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[1]/div/div"),By.xpath("//li[normalize-space()=\"AED\"]"));
+        clickandsend(By.name("service_charge"),"100");
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
     }
     @Test(priority = 3)
     public void PoolyGoon() throws InterruptedException {
@@ -115,5 +119,12 @@ public class AddProject extends MainMethods{
 
         actions.release().perform();
         scrollPage(900);
+    }
+    @Test(priority = 4)
+    public void Description() throws InterruptedException {
+        Thread.sleep(1);
+       click(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[1]/div/div/div"));
+       clickandsend(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[1]/div/div/div"),"asdasdasd");
+
     }
 }
