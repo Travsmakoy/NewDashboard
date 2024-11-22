@@ -6,7 +6,8 @@
             <class name="Start"/>
             <class name="Login"/>
             <class name="AddProjectOffPlan"/>
-            <class name="AddProjectReady"></class>
+            <class name="AddProjectReady"/>
+            <class name="AddPropertyOffplan"/>
         </classes>
     </test>
 </suite>
