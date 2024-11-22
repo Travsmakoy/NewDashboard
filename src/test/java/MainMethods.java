@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeSuite;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MainMethods {
@@ -37,9 +38,9 @@ public class MainMethods {
             System.out.println("TEST DONE");
         }
         //--------ALLURE REPORT------
-//        String projectPath = "C:\\Users\\mark\\IdeaProjects\\NewestDashboard";
-//        String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
-//        Runtime.getRuntime().exec(command);
+        String projectPath = "C:\\Users\\mark\\IdeaProjects\\NewestDashboard";
+        String command = "cmd /c start cmd.exe /K \"cd /d " + projectPath + " && allure serve allure-results\"";
+        Runtime.getRuntime().exec(command);
     }
     public void click(By locator){
         WebElement click = wait.until(ExpectedConditions.elementToBeClickable(locator));
@@ -88,5 +89,11 @@ public class MainMethods {
         String actual = inlineError.getText();
         Assert.assertEquals(actual, expectedValue);
         Allure.step(expectedValue+" REQUIRED FIELDS / TOAST Is showing");
+    }
+    public void RequiredFields(By locator){
+        List<WebElement> Required = Collections.singletonList(wait.until(ExpectedConditions.visibilityOfElementLocated(locator)));
+    }
+    public void createPolygoon(By locator){
+
     }
 }
