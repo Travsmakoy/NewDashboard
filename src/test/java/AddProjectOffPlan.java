@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AddProjectOffPlan extends MainMethods{
-    int projectNameDigits = ThreadLocalRandom.current().nextInt(1, 999999);
+    int projectNameDigits = ThreadLocalRandom.current().nextInt(100, 999999);
     int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
@@ -30,7 +30,7 @@ public class AddProjectOffPlan extends MainMethods{
     }
     @Test(priority = 2)
     public void AddProjectDetails() throws InterruptedException {
-        clickandsend(By.name("project_name"),"AUTOPROJECTOFFPLAN" +projectNameDigits);
+        clickandsend(By.name("project_name"),"PROJECTOFFPLAN" +projectNameDigits);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);

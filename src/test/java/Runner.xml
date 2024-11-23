@@ -9,7 +9,7 @@
             <class name="ProjectOffPlanGallery"/>
             <class name="ProjectPlan"></class>
             <class name="ProjectDocuments"/>
-
+            <class name="AddPromotion"/>
         </classes>
     </test>
 </suite>
