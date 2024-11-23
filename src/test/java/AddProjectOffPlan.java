@@ -107,13 +107,12 @@ public class AddProjectOffPlan extends MainMethods{
                 "Lea at Yas Acres", "Saadiyat Reserve Residences", "Bloom Gardens Abu Dhabi",
                 "Faya Residences Abu Dhabi", "Park View Residences Saadiyat",
                 "Pixel Residences Al Reem Island", "Louvre Abu Dhabi Residences"
-                // Extend this list to 500 names.
         };
         Random random = new Random();
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),selectedProject+" AUTO OFFPLAN FULL DATA");
+        clickandsend(By.name("project_name"),selectedProject+" "+"AUTO OFFPLAN FULL DATA");
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);

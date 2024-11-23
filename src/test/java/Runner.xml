@@ -5,12 +5,13 @@
         <classes>
             <class name="Start"/>
             <class name="Login"/>
-            <class name="AddProjectReady"/>
+<!--            <class name="AddProjectReady"/>-->
 <!--            <class name="AddProjectOffPlan"/>-->
             <class name="ProjectOffPlanGallery"/>
             <class name="ProjectPlan"></class>
             <class name="ProjectDocuments"/>
             <class name="AddPromotion"/>
+            <class name="AddFinancialProvider"/>
         </classes>
     </test>
 </suite>
