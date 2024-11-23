@@ -5,7 +5,7 @@
         <classes>
             <class name="Start"/>
             <class name="Login"/>
-            <class name="RunWithoutAddingProject"/>
+<!--            <class name="RunWithoutAddingProject"/>-->
             <class name="AddProjectReady"/>
             <class name="ProjectOffPlanGallery"/>
             <class name="ProjectPlan"></class>
