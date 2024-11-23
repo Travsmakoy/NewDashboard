@@ -90,10 +90,4 @@ public class MainMethods {
         Assert.assertEquals(actual, expectedValue);
         Allure.step(expectedValue+" REQUIRED FIELDS / TOAST Is showing");
     }
-    public void RequiredFields(By locator){
-        List<WebElement> Required = Collections.singletonList(wait.until(ExpectedConditions.visibilityOfElementLocated(locator)));
-    }
-    public void createPolygoon(By locator){
-
-    }
 }
