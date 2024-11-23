@@ -53,7 +53,7 @@ public class ProjectOffPlanGallery extends MainMethods {
             System.out.println("Uploaded file for iteration " + (i + 1) + ": " + filePath);
 
             // Add a delay if needed between iterations
-            Thread.sleep(500); // Optional: Adjust delay based on application response time
+            Thread.sleep(200); // Optional: Adjust delay based on application response time
         }
         click(By.xpath("/html/body/div[2]/main/div/div/div[1]/div/a"));
     }

@@ -13,7 +13,7 @@ public class ProjectDocuments extends MainMethods{
         click(By.xpath("//*[@id=\"actions-popover\"]/div[3]/div[5]/a"));
     }
     @Test(priority = 2)
-    public void addDocuments(){
+    public void addDocuments() throws InterruptedException {
         for (int i = 0; i < 3; i++) {
         click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[1]/div[3]/div[1]/button"));
         String randomint  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 10));
@@ -37,7 +37,9 @@ public class ProjectDocuments extends MainMethods{
 
         fileInput.sendKeys(filePath);
         click(By.xpath("/html/body/div[3]/div[3]/div/div/div[1]/form/div[4]/button[1]"));
+            Thread.sleep(200);
          }
         click(By.xpath("/html/body/div[2]/main/div/div/div[1]/div/a"));
+
     }
 }

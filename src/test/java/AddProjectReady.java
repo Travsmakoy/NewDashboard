@@ -25,7 +25,7 @@ public class AddProjectReady extends MainMethods{
     @Test(priority = 1)
     public void NavigateToNav() throws InterruptedException {
         Thread.sleep(1000);
-//        click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
+        click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
         click(By.xpath("//span[normalize-space()=\"Projects\"]"));
         click(By.xpath("//span[normalize-space()=\"Add Project\"]"));
     }
@@ -122,7 +122,7 @@ public class AddProjectReady extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),selectedProject+"AUTO OFFPLAN FULL DATA");
+        clickandsend(By.name("project_name"),selectedProject+"AUTO READY FULL DATA");
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
