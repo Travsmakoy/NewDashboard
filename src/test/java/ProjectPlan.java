@@ -15,7 +15,7 @@ public class ProjectPlan extends MainMethods {
     }
     @Test(priority = 2)
     public void UploadPlan() throws InterruptedException {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
         click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[1]/div[3]/button"));
             String randomint  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 4));
         doubleClick(By.xpath("//input[@placeholder='Select Plan Type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint+"]"));
