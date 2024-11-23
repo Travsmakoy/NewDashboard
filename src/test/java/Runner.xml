@@ -5,13 +5,15 @@
         <classes>
             <class name="Start"/>
             <class name="Login"/>
+            <class name="RunWithoutAddingProject"/>
 <!--            <class name="AddProjectReady"/>-->
 <!--            <class name="AddProjectOffPlan"/>-->
-            <class name="ProjectOffPlanGallery"/>
-            <class name="ProjectPlan"></class>
-            <class name="ProjectDocuments"/>
-            <class name="AddPromotion"/>
-            <class name="AddFinancialProvider"/>
+<!--            <class name="ProjectOffPlanGallery"/>-->
+<!--            <class name="ProjectPlan"></class>-->
+<!--            <class name="ProjectDocuments"/>-->
+<!--            <class name="AddPromotion"/>-->
+<!--            <class name="AddFinancialProvider"/>-->
+            <class name="addProperty"/>
         </classes>
     </test>
 </suite>
