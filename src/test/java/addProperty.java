@@ -131,6 +131,6 @@ public class addProperty extends MainMethods{
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[1]/ul/li"));
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[3]/ul/li"));
         click(By.xpath("/html/body/div[2]/main/form/div[6]/button[1]"));
-        Thread.sleep(50000);
+        Thread.sleep(2000);
     }
 }
