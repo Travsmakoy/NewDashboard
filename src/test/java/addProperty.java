@@ -12,7 +12,6 @@ public class addProperty extends MainMethods{
     String maxArea  = String.valueOf(ThreadLocalRandom.current().nextInt(2000, 4000));
     String PlotArea  = String.valueOf(ThreadLocalRandom.current().nextInt(4000, 6000));
     String BuiltArea  = String.valueOf(ThreadLocalRandom.current().nextInt(1000, 4000));
-    String View  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
     String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
 
     @Test(priority = 1)
@@ -24,7 +23,7 @@ public class addProperty extends MainMethods{
     }
 
     @Test(priority = 2)
-    public void AddProperty() {
+    public void AddProperty() throws InterruptedException {
     clickandsend(By.name("property_name"),"PROPERTY - "+randoms);
     scrollPage(500);
         int loop  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 8)));
@@ -127,10 +126,11 @@ public class addProperty extends MainMethods{
 
         WebElement descriptionField = driver.findElement(By.xpath("//textarea[@name='description']"));descriptionField.sendKeys(realEstateDescription);
         scrollPage(1700);
-        click(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[1]/ul"));
-        click(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[4]/ul"));
+//        click(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[1]/ul/li"));
+//        click(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[4]/ul/li"));
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[1]/ul/li"));
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[3]/ul/li"));
         click(By.xpath("/html/body/div[2]/main/form/div[6]/button[1]"));
+        Thread.sleep(50000);
     }
 }
