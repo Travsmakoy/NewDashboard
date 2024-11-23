@@ -33,7 +33,7 @@ public class MainMethods {
     public void tearDownSuite() throws InterruptedException, IOException {
         // Quit the WebDriver instance
         if (driver != null) {
-            Thread.sleep(3500);
+            Thread.sleep(2500);
             driver.quit();
             System.out.println("TEST DONE");
         }

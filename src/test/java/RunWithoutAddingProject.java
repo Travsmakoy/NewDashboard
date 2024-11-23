@@ -2,7 +2,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class RunWithoutAddingProject extends MainMethods{
-    @Test
+    @Test(priority = 1)
     public void navigatetoListing(){
         click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
         click(By.xpath("//span[normalize-space()=\"Projects\"]"));
