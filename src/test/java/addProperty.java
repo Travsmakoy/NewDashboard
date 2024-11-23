@@ -23,6 +23,8 @@ public class addProperty extends MainMethods{
     public void AddProperty() throws InterruptedException {
         click(By.xpath("//a[@href='properties/add']"));
         Thread.sleep(1000);
-        clickandsend(By.xpath("//input[@placeholder='Enter property name']"),"TEST-"+randoms);
+        WebElement mark = driver.findElement(By.xpath("//input[@name='property_name']"));
+        mark.click();
+        mark.sendKeys("Property "+randoms);
     }
 }
