@@ -122,11 +122,8 @@ public class addProperty extends MainMethods{
         String selectedProject = Title[randomIndex];
         clickandsend(By.name("property_title"),selectedProject);
         String realEstateDescription = "This beautifully designed 2-bedroom apartment offers modern living with stunning views of the city skyline. Located in the heart of the vibrant downtown area, this apartment features spacious living areas, high-end finishes, and large windows that fill the space with natural light. The fully equipped kitchen boasts state-of-the-art appliances, while the master bedroom comes with an ensuite bathroom. Residents enjoy access to premium amenities, including a rooftop pool, fully equipped fitness center, and 24/7 security. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience";
-
         WebElement descriptionField = driver.findElement(By.xpath("//textarea[@name='description']"));descriptionField.sendKeys(realEstateDescription);
         scrollPage(1700);
-//        click(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[1]/ul/li"));
-//        click(By.xpath("/html/body/div[2]/main/form/div[4]/div/div[2]/div/div[4]/ul/li"));
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[1]/ul/li"));
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[3]/ul/li"));
         click(By.xpath("/html/body/div[2]/main/form/div[6]/button[1]"));
