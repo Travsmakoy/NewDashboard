@@ -18,8 +18,7 @@ public class addProperty extends MainMethods{
     public void navtoAdd() throws InterruptedException {
         click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[12]/div/button[6]"));
         click(By.xpath("//*[@id=\"actions-popover\"]/div[3]/div[1]/a"));
-        Thread.sleep(100);
-        click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[1]/div[3]/a"));
+        click(By.xpath("//a[@id=\"add-property\"]"));
     }
 
     @Test(priority = 2)

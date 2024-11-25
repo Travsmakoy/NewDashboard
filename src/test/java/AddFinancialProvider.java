@@ -15,7 +15,10 @@ public class AddFinancialProvider extends MainMethods{
         String randomint  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 2));
         doubleClick(By.xpath("//input[@placeholder='Select Provider Type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select Provider Name']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint+"]"));
-        click(By.xpath("/html/body/div[3]/div[3]/div/div/div[1]/form/div[2]/button[1]"));
-        click(By.xpath("/html/body/div[2]/main/div/div/div[1]/div/a"));
+    }
+    @Test(priority = 3)
+    public void BackToList(){
+        click(By.xpath("//button[normalize-space()=\"submit\"]"));
+        click(By.xpath("//a[@class=\"MuiBox-root mui-0\"]"));
     }
 }

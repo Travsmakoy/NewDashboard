@@ -12,7 +12,7 @@
 <!--            <class name="ProjectPlan"></class>-->
 <!--            <class name="ProjectDocuments"/>-->
 <!--            <class name="AddPromotion"/>-->
-<!--            <class name="AddFinancialProvider"/>-->
+            <class name="AddFinancialProvider"/>
             <class name="addProperty"/>
         </classes>
     </test>
