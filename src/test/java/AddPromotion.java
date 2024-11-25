@@ -20,8 +20,8 @@ public class AddPromotion extends MainMethods{
             doubleClick(By.xpath("/html/body/div[5]/div[3]/div/div/div[1]/form/div[1]/div[2]/div/div/div/div/button"),By.xpath("/html/body/div[6]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[5]/button[6]"));
             String realEstateDescription = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate";
             WebElement descriptionField = driver.findElement(By.xpath("//textarea[@name='description']"));descriptionField.sendKeys(realEstateDescription);
-            click(By.xpath("/html/body/div[5]/div[3]/div/div/div[1]/form/div[2]/button[1]"));
-//            Thread.sleep(200);
-            click(By.xpath("/html/body/div[4]/div[3]/div/div/div[1]/div[2]/button[2]"));
+            driver.findElement(By.xpath("//button[normalize-space()=\"Submit\"]")).click();
+            click(By.xpath("//button[normalize-space()=\"Done\"]"));
+
     }
 }

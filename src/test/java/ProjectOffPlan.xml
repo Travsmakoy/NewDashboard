@@ -11,7 +11,7 @@
             <class name="ProjectDocuments"/>
             <class name="AddPromotion"/>
             <class name="AddFinancialProvider"/>
-            <!--<class name="addProperty"/>-->
+            <class name="addProperty"/>
         </classes>
     </test>
 </suite>
