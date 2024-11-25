@@ -10,6 +10,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AddProjectOffPlan extends MainMethods{
+    int projectRan = ThreadLocalRandom.current().nextInt(1, 999);
     int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
@@ -21,6 +22,8 @@ public class AddProjectOffPlan extends MainMethods{
     String randomPosition  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 15));
     String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 30));
     String randomSub  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3));
+    String furn  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 4));
+    String intran  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 5));
 
     @Test(priority = 1)
     public void NavigateToNav(){
@@ -112,7 +115,7 @@ public class AddProjectOffPlan extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),selectedProject+" "+"AUTO OFFPLAN FULL DATA");
+        clickandsend(By.name("project_name"),selectedProject+" "+"AUTO OFFPLAN FULL DATA "+projectRan);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
@@ -130,9 +133,9 @@ public class AddProjectOffPlan extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         clickandsend(By.name("plot_area"),plotArea);
         clickandsend(By.name("built_up_area"),BuiltArea);
-        doubleClick(By.xpath("//input[@placeholder='Select Furnished']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        doubleClick(By.xpath("//input[@placeholder='Select Furnished']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+furn+"]"));
         clickandsend(By.name("no_of_properties"),noProperties);
-        doubleClick(By.xpath("//input[@placeholder='Select Ownership']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        doubleClick(By.xpath("//input[@placeholder='Select Ownership']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+intran+"]"));
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[10]/div/div/div/div[2]/button"));
         click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[1]"));
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[2]/button"));
