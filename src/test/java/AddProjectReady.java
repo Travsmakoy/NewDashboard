@@ -19,7 +19,7 @@ public class AddProjectReady extends MainMethods{
     String completionPercentage = String.valueOf(ThreadLocalRandom.current().nextInt(1, 100));
     String ServiceCharge = String.valueOf(ThreadLocalRandom.current().nextInt(1, 1000));
     String randomPosition  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 15));
-    String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 30));
+    String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
     String randomSub  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3));
 
     @Test(priority = 1)
