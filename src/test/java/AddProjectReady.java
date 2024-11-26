@@ -28,6 +28,7 @@ public class AddProjectReady extends MainMethods{
         click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
         click(By.xpath("//span[normalize-space()=\"Projects\"]"));
         click(By.xpath("//span[normalize-space()=\"Add Project\"]"));
+        click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
     }
     //    @Test(priority = 2)
 //    public void CheckRequiredFields(){
