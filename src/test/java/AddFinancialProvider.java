@@ -17,8 +17,9 @@ public class AddFinancialProvider extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select Provider Name']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint+"]"));
     }
     @Test(priority = 3)
-    public void BackToList(){
+    public void BackToList() throws InterruptedException {
         click(By.xpath("//button[normalize-space()=\"submit\"]"));
         click(By.xpath("//a[@class=\"MuiBox-root mui-0\"]"));
+        Thread.sleep(500);
     }
 }

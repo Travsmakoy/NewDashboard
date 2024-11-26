@@ -7,6 +7,13 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Company extends MainMethods {
+    String randomint = String.valueOf(ThreadLocalRandom.current().nextInt(1,4));
+    String randomint1 = String.valueOf(ThreadLocalRandom.current().nextInt(1,4));
+    String randomint3 = String.valueOf(ThreadLocalRandom.current().nextInt(1,2));
+    String randomint4 = String.valueOf(ThreadLocalRandom.current().nextInt(1,999999));
+    String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
+    String randomSub  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3));
+    String VAT  = String.valueOf(ThreadLocalRandom.current().nextInt(999999, 99999999));
     @Test(priority = 1)
     public void NavigateToNav() {
         click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
@@ -14,13 +21,6 @@ public class Company extends MainMethods {
         click(By.xpath("//span[normalize-space()=\"Add Company\"]"));
         click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
     }
-    String randomint = String.valueOf(ThreadLocalRandom.current().nextInt(1,4));
-    String randomint1 = String.valueOf(ThreadLocalRandom.current().nextInt(1,4));
-    String randomint3 = String.valueOf(ThreadLocalRandom.current().nextInt(1,2));
-    String randomint4 = String.valueOf(ThreadLocalRandom.current().nextInt(1,999999));
-    String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
-    String randomSub  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3));
-
     @Test(priority = 2)
     public void AddCompany(){
         doubleClick(By.xpath("//input[@placeholder='Please Select Company Type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint+"]"));
@@ -57,6 +57,13 @@ public class Company extends MainMethods {
         WebElement fileInput = driver.findElement(By.xpath("//input[@type=\"file\"]"));
         fileInput.sendKeys(filePath);
 
-        Thread.sleep(200);
+        click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[3]/div/div/div/div[2]/button"));
+        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[1]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[4]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/button[4]"));
+        Thread.sleep(500);
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[5]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[5]/button[7]"));
+        scrollPage(500);
+        clickandsend(By.name("vat_no"),VAT);
+
     }
 }
