@@ -45,7 +45,6 @@ public class Company extends MainMethods {
 
         // Move to the center of the map and click
         actions.moveToElement(mapElement, 50, 50).click().perform(); // Adjust the offset (50, 50) as needed
-
     }
     @Test(priority = 4)
     public void AddDetails() throws InterruptedException {
@@ -56,10 +55,6 @@ public class Company extends MainMethods {
         File folder = new File(folderPath);
         File[] files = folder.listFiles();
 
-        if (files == null || files.length == 0) {
-            System.out.println("No files found in the folder!");
-            return;
-        }
 
         Random random = new Random();
         File randomFile = files[random.nextInt(files.length)];
@@ -82,13 +77,8 @@ public class Company extends MainMethods {
         File folder1 = new File(folderPath1);
         File[] files1 = folder1.listFiles();
 
-        if (files == null || files.length == 0) {
-            System.out.println("No files found in the folder!");
-            return;
-        }
-
         Random random1 = new Random();
-        File randomFile1 = files1[random.nextInt(files1.length)];
+        File randomFile1 = files1[random1.nextInt(files1.length)];
         String filePath1 = randomFile1.getAbsolutePath();
 
         WebElement fileInput1 = driver.findElement(By.name("vat_file_url"));
@@ -103,19 +93,14 @@ public class Company extends MainMethods {
         Thread.sleep(250);
         String folderPath2 = "D:\\Mark OneDrive\\OneDrive - aqary international group\\Desktop\\IMAGES FOR AUTO\\COMPANY LOGO";
         File folder2 = new File(folderPath2);
-        File[] files2 = folder.listFiles();
-
-        if (files == null || files.length == 0) {
-            System.out.println("No files found in the folder!");
-            return;
-        }
+        File[] files2 = folder2.listFiles();
 
         Random random2 = new Random();
-        File randomFile2 = files[random.nextInt(files.length)];
-        String filePath2 = randomFile.getAbsolutePath();
+        File randomFile2 = files2[random2.nextInt(files2.length)];
+        String filePath2 = randomFile2.getAbsolutePath();
 
         WebElement fileInput2 = driver.findElement(By.name("logo_url"));
-        fileInput2.sendKeys(filePath);
+        fileInput2.sendKeys(filePath2);
 
         scrollPage(500);
         Thread.sleep(250);
