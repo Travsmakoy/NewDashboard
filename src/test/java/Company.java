@@ -40,11 +40,9 @@ public class Company extends MainMethods {
 
         WebElement mapElement = driver.findElement(By.cssSelector("div[style*='z-index: 3'][style*='position: absolute']"));
 
-        // Use Actions to move to the map and click at specific coordinates
         Actions actions = new Actions(driver);
 
-        // Move to the center of the map and click
-        actions.moveToElement(mapElement, 50, 50).click().perform(); // Adjust the offset (50, 50) as needed
+        actions.moveToElement(mapElement, 50, 50).click().perform();
     }
     @Test(priority = 4)
     public void AddDetails() throws InterruptedException {
