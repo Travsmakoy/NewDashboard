@@ -79,8 +79,8 @@ public class Company extends MainMethods {
 
         Thread.sleep(250);
         String folderPath1 = "D:\\Mark OneDrive\\OneDrive - aqary international group\\Desktop\\IMAGES";
-        File folder1 = new File(folderPath);
-        File[] files1 = folder.listFiles();
+        File folder1 = new File(folderPath1);
+        File[] files1 = folder1.listFiles();
 
         if (files == null || files.length == 0) {
             System.out.println("No files found in the folder!");
@@ -88,11 +88,11 @@ public class Company extends MainMethods {
         }
 
         Random random1 = new Random();
-        File randomFile1 = files[random.nextInt(files.length)];
-        String filePath1 = randomFile.getAbsolutePath();
+        File randomFile1 = files1[random.nextInt(files1.length)];
+        String filePath1 = randomFile1.getAbsolutePath();
 
         WebElement fileInput1 = driver.findElement(By.name("vat_file_url"));
-        fileInput1.sendKeys(filePath);
+        fileInput1.sendKeys(filePath1);
 
         scrollPage(500);
         clickandsend(By.name("website_url"),"https://facebook.com/test"+randomint);
@@ -101,8 +101,8 @@ public class Company extends MainMethods {
         clickandsend(By.name("company_whatsapp_number"),"543835792");
 
         Thread.sleep(250);
-        String folderPath2 = "D:\\Mark OneDrive\\OneDrive - aqary international group\\Desktop\\IMAGES";
-        File folder2 = new File(folderPath);
+        String folderPath2 = "D:\\Mark OneDrive\\OneDrive - aqary international group\\Desktop\\IMAGES FOR AUTO\\COMPANY LOGO";
+        File folder2 = new File(folderPath2);
         File[] files2 = folder.listFiles();
 
         if (files == null || files.length == 0) {
