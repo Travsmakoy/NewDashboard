@@ -105,8 +105,8 @@ public class Company extends MainMethods {
         scrollPage(500);
         Thread.sleep(250);
         String folderPath3 = "D:\\Mark OneDrive\\OneDrive - aqary international group\\Desktop\\IMAGES";
-        File folder3 = new File(folderPath);
-        File[] files3 = folder.listFiles();
+        File folder3 = new File(folderPath3);
+        File[] files3 = folder3.listFiles();
 
         if (files == null || files.length == 0) {
             System.out.println("No files found in the folder!");
@@ -114,11 +114,11 @@ public class Company extends MainMethods {
         }
 
         Random random3 = new Random();
-        File randomFile3 = files[random.nextInt(files.length)];
-        String filePath3 = randomFile.getAbsolutePath();
+        File randomFile3 = files3[random3.nextInt(files3.length)];
+        String filePath3 = randomFile3.getAbsolutePath();
 
         WebElement fileInput3 = driver.findElement(By.name("cover_image_url"));
-        fileInput3.sendKeys(filePath);
+        fileInput3.sendKeys(filePath3);
 
         String realEstateDescription = "This beautifully designed 2-bedroom apartment offers modern living with stunning views of the city skyline. Located in the heart of the vibrant downtown area, this apartment features spacious living areas, high-end finishes, and large windows that fill the space with natural light. The fully equipped kitchen boasts state-of-the-art appliances, while the master bedroom comes with an ensuite bathroom. Residents enjoy access to premium amenities, including a rooftop pool, fully equipped fitness center, and 24/7 security. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience";
 
