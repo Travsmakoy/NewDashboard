@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Company extends MainMethods {
-    String randomint = String.valueOf(ThreadLocalRandom.current().nextInt(1,4));
+    String randomint = String.valueOf(ThreadLocalRandom.current().nextInt(1,5));
     String randomint1 = String.valueOf(ThreadLocalRandom.current().nextInt(1,4));
     String randomint3 = String.valueOf(ThreadLocalRandom.current().nextInt(1,2));
     String randomint4 = String.valueOf(ThreadLocalRandom.current().nextInt(1,999999));
