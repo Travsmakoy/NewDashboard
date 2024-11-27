@@ -21,7 +21,7 @@ public class AddPromotion extends MainMethods{
             String realEstateDescription = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate";
             WebElement descriptionField = driver.findElement(By.xpath("//textarea[@name='description']"));descriptionField.sendKeys(realEstateDescription);
             driver.findElement(By.xpath("//button[normalize-space()=\"Submit\"]")).click();
-            click(By.xpath("//button[normalize-space()=\"Done\"]"));
+            driver.findElement(By.xpath("//button[normalize-space()=\"Done\"]")).click();
 
     }
 }

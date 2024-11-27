@@ -18,8 +18,8 @@ public class AddFinancialProvider extends MainMethods{
     }
     @Test(priority = 3)
     public void BackToList() throws InterruptedException {
-        click(By.xpath("//button[normalize-space()=\"submit\"]"));
-        click(By.xpath("//a[@class=\"MuiBox-root mui-0\"]"));
+        driver.findElement(By.xpath("//button[normalize-space()=\"submit\"]")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div[1]/div/a")).click();
         Thread.sleep(500);
     }
 }
