@@ -43,7 +43,7 @@ public class MainMethods {
 //        Runtime.getRuntime().exec(command);
     }
     public void click(By locator){
-        WebElement click = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        WebElement click = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         click.click();
         Allure.step("Clicked "+click.getText());
     }
