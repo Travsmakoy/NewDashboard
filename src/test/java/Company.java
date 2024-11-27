@@ -8,6 +8,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Company extends MainMethods {
+    String randomint = String.valueOf(ThreadLocalRandom.current().nextInt(2,5));
     String randomint1 = String.valueOf(ThreadLocalRandom.current().nextInt(1,4));
     String randomint3 = String.valueOf(ThreadLocalRandom.current().nextInt(1,2));
     String randomint4 = String.valueOf(ThreadLocalRandom.current().nextInt(1,999999));
@@ -24,7 +25,6 @@ public class Company extends MainMethods {
     }
     @Test(priority = 2)
     public void AddCompany(){
-        String randomint = String.valueOf(ThreadLocalRandom.current().nextInt(2,5));
         doubleClick(By.xpath("//input[@placeholder='Please Select Company Type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint+"]"));
         doubleClick(By.xpath("//input[@placeholder='Choose category']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint1+"]"));
         doubleClick(By.xpath("//input[@placeholder='Choose a company activity']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint3+"]"));
