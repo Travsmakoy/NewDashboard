@@ -9,7 +9,7 @@ public class AddPromotion extends MainMethods{
     String randomint  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 15));
 
     @Test(priority = 1)
-    public void NavtoPromotion(){
+    public void NavtoProjectPromotion(){
         click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[12]/div/button[6]"));
         click(By.xpath("//*[@id=\"actions-popover\"]/div[3]/div[3]"));
     }

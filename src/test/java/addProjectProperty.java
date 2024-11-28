@@ -1,13 +1,11 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class addProperty extends MainMethods{
+public class addProjectProperty extends MainMethods{
     String randoms  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 99999));
     String minArea  = String.valueOf(ThreadLocalRandom.current().nextInt(1000, 2000));
     String maxArea  = String.valueOf(ThreadLocalRandom.current().nextInt(2000, 4000));
@@ -67,7 +65,7 @@ public class addProperty extends MainMethods{
         scrollPage(1700);
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[1]/ul/li"));
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[3]/ul/li"));
-        click(By.xpath("/html/body/div[2]/main/form/div[6]/button[1]"));
+        driver.findElement(By.xpath("/html/body/div[2]/main/form/div[6]/button[1]")).click();
         Thread.sleep(4000);
     }
 }

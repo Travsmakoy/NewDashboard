@@ -3,16 +3,16 @@
 <suite name="Suite">
     <test name="Test">
         <classes>
-            <class name="Start"/>
+            <class name="VerifyDashboard"/>
             <class name="Login"/>
 <!--            <class name="RunWithoutAddingProject"/>-->
             <class name="AddProjectReady"/>
-            <class name="ProjectOffPlanGallery"/>
+            <class name="ProjectGallery"/>
             <class name="ProjectPlan"></class>
             <class name="ProjectDocuments"/>
             <class name="AddPromotion"/>
             <class name="AddFinancialProvider"/>
-            <class name="addProperty"/>
+            <class name="addProjectProperty"/>
         </classes>
     </test>
 </suite>

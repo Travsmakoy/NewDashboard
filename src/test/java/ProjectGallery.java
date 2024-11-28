@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.io.File;
 import java.util.Random;
 
-public class ProjectOffPlanGallery extends MainMethods {
+public class ProjectGallery extends MainMethods {
 
     @Test(priority = 1)
     public void NavtoAdd(){
