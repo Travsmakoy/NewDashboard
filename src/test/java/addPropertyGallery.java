@@ -42,5 +42,6 @@ public class addPropertyGallery extends MainMethods {
 
             Thread.sleep(200);
         }
+        click(By.xpath("/html/body/div[2]/main/div/div/div[1]/div/a"));
     }
 }
