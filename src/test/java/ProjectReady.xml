@@ -13,6 +13,7 @@
             <class name="AddPromotion"/>
             <class name="AddFinancialProvider"/>
             <class name="addProjectProperty"/>
+            <class name="addPropertyGallery"></class>
         </classes>
     </test>
 </suite>
