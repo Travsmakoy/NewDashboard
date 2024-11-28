@@ -24,7 +24,7 @@ public class addProperty extends MainMethods{
 
     @Test(priority = 2)
     public void AddProperty() throws InterruptedException {
-    clickandsend(By.name("property_name"),"PROPERTY - "+randoms);
+    clickandsend(By.name("property_name"),"PROPERTY AUTO - "+randoms);
         WebElement mapElement = driver.findElement(By.cssSelector("div[style*='z-index: 3'][style*='position: absolute']"));
 
         Actions actions = new Actions(driver);
