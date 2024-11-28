@@ -16,7 +16,7 @@
 <!--            <class name="AddMultiPhase"/>-->
             <class name="addProjectProperty"/>
             <class name="addPropertyGallery"/>
-            <class name="addPropertyPlan"></class>
+            <class name="addPropertyPlan"/>
 <!--            <class name="Company"/>-->
         </classes>
     </test>
