@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ProjectDocuments extends MainMethods{
     @Test(priority = 1)
     public void NavtoDocument(){
-        click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[12]/div/button[6]"));
+        click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[11]/div/button[6]"));
         click(By.xpath("//*[@id=\"actions-popover\"]/div[3]/div[5]/a"));
     }
     @Test(priority = 2)
