@@ -10,6 +10,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AddProjectReady extends MainMethods{
+    int projectRan = ThreadLocalRandom.current().nextInt(1, 98756132);
     int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
@@ -123,7 +124,7 @@ public class AddProjectReady extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),selectedProject+" "+"AUTO READY FULL DATA");
+        clickandsend(By.name("project_name"),selectedProject+" "+"AUTO READY FULL DATA "+projectRan);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);

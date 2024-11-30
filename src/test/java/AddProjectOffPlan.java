@@ -10,7 +10,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AddProjectOffPlan extends MainMethods{
-    int projectRan = ThreadLocalRandom.current().nextInt(1, 999);
+    int projectRan = ThreadLocalRandom.current().nextInt(1, 98756132);
     int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
