@@ -1,8 +1,11 @@
 import org.example.Main;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class PropertyUnitTypes extends MainMethods {
     @Test(priority = 1)
@@ -46,5 +49,31 @@ public class PropertyUnitTypes extends MainMethods {
         int randomIndex = random.nextInt(unitTypes.length);
         String SelectedUnit = unitTypes[randomIndex];
         clickandsend(By.name("type_name"),SelectedUnit);
+        String MinArea = String.valueOf(ThreadLocalRandom.current().nextInt(1000,2000));
+        String MaxArea = String.valueOf(ThreadLocalRandom.current().nextInt(2500,3500));
+        String MinPrice = String.valueOf(ThreadLocalRandom.current().nextInt(10000,20000));
+        String MaxPrice = String.valueOf(ThreadLocalRandom.current().nextInt(25000,35000));
+        String bedrooms = String.valueOf(ThreadLocalRandom.current().nextInt(1,10));
+        String parking = String.valueOf(ThreadLocalRandom.current().nextInt(1,10));
+        clickandsend(By.name("min_area"),MinArea);
+        clickandsend(By.name("max_area"),MinArea);
+        clickandsend(By.name("min_price"),MinPrice);
+        clickandsend(By.name("max_price"),MaxPrice);
+        clickandsend(By.name("bedrooms"),bedrooms);
+        clickandsend(By.name("parkings"),parking);
+
+        String folderPath = "D:\\Mark OneDrive\\OneDrive - aqary international group\\Desktop\\IMAGES";
+        File folder = new File(folderPath);
+        File[] files = folder.listFiles();
+
+
+        Random random1 = new Random();
+        File randomFile = files[random1.nextInt(files.length)];
+        String filePath = randomFile.getAbsolutePath();
+
+        WebElement fileInput = driver.findElement(By.xpath("//input[@type=\"file\"]"));
+        fileInput.sendKeys(filePath);
+
+        click(By.xpath("//button[normalize-space()=\"submit\"]"));
     }
 }
