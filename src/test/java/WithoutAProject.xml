@@ -15,9 +15,10 @@
 <!--            <class name="AddFinancialProvider"/>-->
 <!--            <class name="AddMultiPhase"/>-->
             <class name="addProjectProperty"/>
-            <class name="addPropertyGallery"/>
-            <class name="addPropertyPlan"/>
+<!--            <class name="addPropertyGallery"/>-->
+<!--            <class name="addPropertyPlan"/>-->
 <!--        <class name="Company"/>-->
+            <class name="PropertyUnitTypes"></class>
         </classes>
     </test>
 </suite>
