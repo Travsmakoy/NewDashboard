@@ -129,7 +129,7 @@ public class AddProjectOffPlan extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         clickandsend(By.name("completion_percentage"),completionPercentage);
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[3]/div/div/div/div[2]/button"));
-        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[2]"));
+        click(By.xpath("//button[normalize-space()=\"29\"]"));
         doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         clickandsend(By.name("plot_area"),plotArea);
         clickandsend(By.name("built_up_area"),BuiltArea);
@@ -137,12 +137,12 @@ public class AddProjectOffPlan extends MainMethods{
         clickandsend(By.name("no_of_properties"),noProperties);
         doubleClick(By.xpath("//input[@placeholder='Select Ownership']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+intran+"]"));
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[10]/div/div/div/div[2]/button"));
-        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[1]"));
+        click(By.xpath("//button[normalize-space()=\"28\"]"));
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[2]/button"));
-        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[5]/button[4]"));
+        click(By.xpath("//button[normalize-space()=\"30\"]"));
         Thread.sleep(250);
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[12]/div/div/div/div[2]/button"));
-        click(By.xpath("//button[normalize-space()=\"29\"]"));
+        click(By.xpath("//button[normalize-space()=\"31\"]"));
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[1]/div/div"),By.xpath("//li[normalize-space()=\"AED\"]"));
         clickandsend(By.name("service_charge"),ServiceCharge);
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
