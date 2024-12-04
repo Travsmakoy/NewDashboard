@@ -8,6 +8,11 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class PropertyUnitTypes extends MainMethods {
+//    @Test(priority = 0)
+//    public void NOTADDINGPROPERTY(){
+//        click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[11]/div/button[6]"));
+//        click(By.xpath("//*[@id=\"actions-popover\"]/div[3]/div[1]/a"));
+//    }
     @Test(priority = 1)
     public void GotoUnitTypes(){
         click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[7]/div/button[6]"));
@@ -48,7 +53,7 @@ public class PropertyUnitTypes extends MainMethods {
         Random random = new Random();
         int randomIndex = random.nextInt(unitTypes.length);
         String SelectedUnit = unitTypes[randomIndex];
-        clickandsend(By.name("type_name"),SelectedUnit);
+        clickandsend(By.name("type_name"),SelectedUnit );
         String MinArea = String.valueOf(ThreadLocalRandom.current().nextInt(1000,2000));
         String MaxArea = String.valueOf(ThreadLocalRandom.current().nextInt(2500,3500));
         String MinPrice = String.valueOf(ThreadLocalRandom.current().nextInt(10000,20000));

@@ -10,7 +10,7 @@
             <class name="ProjectGallery"/>
             <class name="ProjectPlan"></class>
             <class name="ProjectDocuments"/>
-            <class name="AddPromotion"/>
+<!--            <class name="AddPromotion"/>-->
             <class name="AddFinancialProvider"/>
             <class name="addProjectProperty"/>
             <class name="addPropertyGallery"></class>
