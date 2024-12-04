@@ -144,9 +144,9 @@ public class AddProjectReady extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select Ownership']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[8]/div/div/div/div[2]/button"),By.xpath("//button[normalize-space()=\"28\"]"));
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[10]/div/div/div/div[2]/button"));
-        click(By.xpath("//button[normalize-space()=\"30\"]"));
+        click(By.xpath("//button[normalize-space()=\"31\"]"));
         Thread.sleep(300);
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[2]/button"),By.xpath("//button[normalize-space()=\"31\"]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[2]/button"),By.xpath("//button[normalize-space()=\"30\"]"));
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[1]/div/div"),By.xpath("//li[normalize-space()=\"AED\"]"));
         clickandsend(By.name("service_charge"),ServiceCharge);
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
