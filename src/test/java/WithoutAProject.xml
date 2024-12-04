@@ -17,7 +17,7 @@
             <class name="addProjectProperty"/>
             <class name="addPropertyGallery"/>
             <class name="addPropertyPlan"/>
-<!--            <class name="Company"/>-->
+<!--        <class name="Company"/>-->
         </classes>
     </test>
 </suite>
