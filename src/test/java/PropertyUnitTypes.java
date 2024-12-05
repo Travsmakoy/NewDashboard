@@ -23,32 +23,7 @@ public class PropertyUnitTypes extends MainMethods {
         click(By.xpath("//button[normalize-space()=\"Add Unit Type\"]"));
         doubleClick(By.xpath("//input[@placeholder='Select unit type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         String[] unitTypes = {
-                "Studio",
-                "1BR",
-                "2BR",
-                "3BR",
-                "4BR",
-                "5BR+",
-                "Penthouse",
-                "Duplex",
-                "Villa",
-                "Townhouse",
-                "Office",
-                "Shop",
-                "Warehouse",
-                "Retail Space",
-                "Plot",
-                "Agricultural Land",
-                "Industrial Land",
-                "Residential Plot",
-                "Commercial Plot",
-                "Mixed-Use Development",
-                "Serviced Apartment",
-                "Hotel Apartment",
-                "Factory",
-                "Hospital",
-                "School",
-                "Sports Facility",
+                "Studio", "1BR", "2BR", "3BR", "4BR", "5BR+", "Penthouse", "Duplex", "Villa", "Townhouse", "Office", "Shop", "Warehouse", "Retail Space", "Plot", "Agricultural Land", "Industrial Land", "Residential Plot", "Commercial Plot", "Mixed-Use Development", "Serviced Apartment", "Hotel Apartment", "Factory", "Hospital", "School", "Sports Facility",
         };
         Random random = new Random();
         int randomIndex = random.nextInt(unitTypes.length);
