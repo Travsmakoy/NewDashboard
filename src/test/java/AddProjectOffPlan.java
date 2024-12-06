@@ -115,7 +115,7 @@ public class AddProjectOffPlan extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),selectedProject+" "+"AUTO OFFPLAN FULL DATA "+projectRan);
+        clickandsend(By.name("project_name"),"SINGLE PHASE FULL DATA "+selectedProject);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
@@ -130,7 +130,8 @@ public class AddProjectOffPlan extends MainMethods{
         clickandsend(By.name("completion_percentage"),completionPercentage);
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[3]/div/div/div/div[2]/button"));
         click(By.xpath("//button[normalize-space()=\"29\"]"));
-        doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        String randomlife  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 2));
+        doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomlife+"]"));
         clickandsend(By.name("plot_area"),plotArea);
         clickandsend(By.name("built_up_area"),BuiltArea);
         doubleClick(By.xpath("//input[@placeholder='Select Furnished']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+furn+"]"));
@@ -144,8 +145,6 @@ public class AddProjectOffPlan extends MainMethods{
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[12]/div/div/div/div[2]/button"));
         click(By.xpath("//button[normalize-space()=\"31\"]"));
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[1]/div/div"),By.xpath("//li[normalize-space()=\"AED\"]"));
-        clickandsend(By.name("service_charge"),ServiceCharge);
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
     }
     @Test(priority = 3)
     public void PoolyGoon() throws InterruptedException {
@@ -212,6 +211,8 @@ public class AddProjectOffPlan extends MainMethods{
     }
     @Test(priority = 4)
     public void Description() throws InterruptedException {
+        clickandsend(By.name("service_charge"),ServiceCharge);
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
         scrollPage(500);
         String realEstateDescription = "This beautifully designed 2-bedroom apartment offers modern living with stunning views of the city skyline. Located in the heart of the vibrant downtown area, this apartment features spacious living areas, high-end finishes, and large windows that fill the space with natural light. The fully equipped kitchen boasts state-of-the-art appliances, while the master bedroom comes with an ensuite bathroom. Residents enjoy access to premium amenities, including a rooftop pool, fully equipped fitness center, and 24/7 security. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience";
 

@@ -8,11 +8,11 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class PropertyUnitTypes extends MainMethods {
-    @Test(priority = 0)
-    public void NOTADDINGPROPERTY(){
-        click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[11]/div/button[6]"));
-        click(By.xpath("//*[@id=\"actions-popover\"]/div[3]/div[1]/a"));
-    }
+//    @Test(priority = 0)
+//    public void NOTADDINGPROPERTY(){
+//        click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[11]/div/button[6]"));
+//        click(By.xpath("//*[@id=\"actions-popover\"]/div[3]/div[1]/a"));
+//    }
     @Test(priority = 1)
     public void GotoUnitTypes(){
         click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[7]/div/button[6]"));
@@ -36,7 +36,7 @@ public class PropertyUnitTypes extends MainMethods {
         String bedrooms = String.valueOf(ThreadLocalRandom.current().nextInt(1,10));
         String parking = String.valueOf(ThreadLocalRandom.current().nextInt(1,10));
         clickandsend(By.name("min_area"),MinArea);
-        clickandsend(By.name("max_area"),MinArea);
+        clickandsend(By.name("max_area"),MaxArea);
         clickandsend(By.name("min_price"),MinPrice);
         clickandsend(By.name("max_price"),MaxPrice);
         clickandsend(By.name("bedrooms"),bedrooms);

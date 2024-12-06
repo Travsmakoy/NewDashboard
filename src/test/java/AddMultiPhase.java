@@ -123,33 +123,22 @@ public class AddMultiPhase extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),selectedProject+" "+"AUTO READY FULL DATA");
+        clickandsend(By.name("project_name"),"MULTIPHASE FULL DATA "+selectedProject);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
         doubleClick(By.xpath("//input[@placeholder='Developer Company']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomPosition+"]"));
-        click(By.xpath("//input[@type='checkbox' and @value='false' and @name='is_multiphase' and contains(@class, 'PrivateSwitchBase-input') and contains(@class, 'MuiSwitch-input') and contains(@class, 'mui-j8yymo')]"));
+        WebElement checkbox = driver.findElement(By.xpath("//input[contains(@class, 'MuiSwitch-input') and @type='checkbox']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
         doubleClick(By.xpath("//input[@placeholder='Select Country']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select State']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select City']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomCom+"]"));
         doubleClick(By.xpath("//input[@placeholder='Select Sub Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomSub+"]"));
         scrollPage(800);
-        doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=2]"));
-        doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
-        clickandsend(By.name("plot_area"),plotArea);
-        clickandsend(By.name("built_up_area"),BuiltArea);
-        doubleClick(By.xpath("//input[@placeholder='Select Furnished']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
-        clickandsend(By.name("no_of_properties"),noProperties);
-        doubleClick(By.xpath("//input[@placeholder='Select Ownership']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[8]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[3]/button[1]"));
-        click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[10]/div/div/div/div[2]/button"));
-        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[5]/button[7]"));
-        Thread.sleep(300);
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[5]/button[6]"));
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[1]/div/div"),By.xpath("//li[normalize-space()=\"AED\"]"));
-        clickandsend(By.name("service_charge"),ServiceCharge);
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
+        String randomlife  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 2));
+        doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomlife+"]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[1]"));
     }
     @Test(priority = 3)
     public void PoolyGoon() throws InterruptedException {
@@ -230,11 +219,6 @@ public class AddMultiPhase extends MainMethods{
         scrollPage(500);
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[4]/ul/li[1]"));
         click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[5]/ul/li"));
-        scrollPage(500);
-        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[4]/ul/li[1]"));
-        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[6]/ul/li[3]"));
-        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[9]/ul/li[1]"));
-        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[13]/ul/li[5]"));
-        click(By.xpath("/html/body/div[2]/main/form/div[7]/button[1]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[6]/button[1]"));
     }
 }

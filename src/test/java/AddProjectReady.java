@@ -124,11 +124,11 @@ public class AddProjectReady extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),selectedProject+" "+"AUTO READY FULL DATA "+projectRan);
+        clickandsend(By.name("project_name"),"SINGLE PHASE FULL DATA "+selectedProject);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
-        doubleClick(By.xpath("//input[@placeholder='Developer Company']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+projectRan+"]"));
+        doubleClick(By.xpath("//input[@placeholder='Developer Company']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomPosition+"]"));
         doubleClick(By.xpath("//input[@placeholder='Select Country']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select State']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         doubleClick(By.xpath("//input[@placeholder='Select City']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
@@ -136,7 +136,8 @@ public class AddProjectReady extends MainMethods{
         doubleClick(By.xpath("//input[@placeholder='Select Sub Community']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomSub+"]"));
         scrollPage(800);
         doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=2]"));
-        doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        String randomlife  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 2));
+        doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomlife+"]"));
         clickandsend(By.name("plot_area"),plotArea);
         clickandsend(By.name("built_up_area"),BuiltArea);
         doubleClick(By.xpath("//input[@placeholder='Select Furnished']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
