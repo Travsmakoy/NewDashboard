@@ -17,4 +17,5 @@
             <class name="addPropertyPlan"></class>
         </classes>
     </test>
+
 </suite>
