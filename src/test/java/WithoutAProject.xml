@@ -17,7 +17,7 @@
 <!--            <class name="AddMultiPhase"/>-->
             <class name="addProjectProperty"/>
             <class name="addPropertyGallery"/>
-            <class name="addPropertyPlan"/>
+<!--            <class name="addPropertyPlan"/>-->
             <class name="PropertyUnitTypes"></class>
             <!--        <class name="Company"/>-->
 
