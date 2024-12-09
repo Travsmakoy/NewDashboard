@@ -62,10 +62,10 @@ public class Company extends MainMethods {
         fileInput.sendKeys(filePath);
 
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[3]/div/div/div/div[2]/button"));
-        click(By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[1]"));
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[4]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/button[4]"));
+        click(By.xpath("//button[normalize-space()=\"1\"]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[4]/div/div/div/div[2]/button"),By.xpath("//button[normalize-space()=\"5\"]"));
         Thread.sleep(500);
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[5]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[5]/button[7]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[5]/div/div/div/div[2]/button"),By.xpath("//button[normalize-space()=\"29\"]"));
         scrollPage(500);
         clickandsend(By.name("vat_no"),VAT);
         doubleClick(By.xpath("//input[@placeholder='Please Select VAT Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
