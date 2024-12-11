@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class AddMultiPhase extends MainMethods{
     int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999999999);
-    int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999919);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
     String BuiltArea = String.valueOf(ThreadLocalRandom.current().nextInt(5000, 10000));
     String plotArea = String.valueOf(ThreadLocalRandom.current().nextInt(6000, 10010));

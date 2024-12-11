@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class AddPromotion extends MainMethods{
 
-    String randomint  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 15));
+    String randomint  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 10));
 
     @Test(priority = 1)
     public void NavtoProjectPromotion(){
