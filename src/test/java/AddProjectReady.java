@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class AddProjectReady extends MainMethods{
     int projectRan = ThreadLocalRandom.current().nextInt(1, 98756132);
-    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999999);
     int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
     String BuiltArea = String.valueOf(ThreadLocalRandom.current().nextInt(5000, 10000));
@@ -175,40 +175,40 @@ public class AddProjectReady extends MainMethods{
         int centerX = mapWidth / 2;
         int centerY = mapHeight / 2;
 
-// Define the box dimensions (in pixels)
-        int boxWidth = 100;  // Adjust as needed
-        int boxHeight = 100; // Adjust for a perfect square, or modify for rectangle
+        // Reduced box dimensions (much smaller)
+        int boxWidth = 20;   // Very small width
+        int boxHeight = 20;  // Very small height
 
-// Calculate starting point (top-left corner of the box)
+        // Calculate starting point (top-left corner of the box)
         int startX = centerX - (boxWidth / 2);  // Center the box horizontally
         int startY = centerY - (boxHeight / 2); // Center the box vertically
 
-// Move to starting point and begin drawing
+        // Move to starting point and begin drawing
         actions.moveByOffset(startX, startY).click().perform();
         Allure.step("Started at top-left corner");
         Thread.sleep(500);
 
-// Draw top edge
+        // Draw top edge
         actions.moveByOffset(boxWidth, 0).click().perform();
         Allure.step("Drew top edge");
         Thread.sleep(500);
 
-// Draw right edge
+        // Draw right edge
         actions.moveByOffset(0, boxHeight).click().perform();
         Allure.step("Drew right edge");
         Thread.sleep(500);
 
-// Draw bottom edge
+        // Draw bottom edge
         actions.moveByOffset(-boxWidth, 0).click().perform();
         Allure.step("Drew bottom edge");
         Thread.sleep(500);
 
-// Close the box by returning to start
+        // Close the box by returning to start
         actions.moveByOffset(0, -boxHeight).click().perform();
         Allure.step("Closed the box");
         Thread.sleep(500);
 
-// Final click to complete the selection
+        // Final click to complete the selection
         actions.moveByOffset(1, 1).click().perform();
         Allure.step("Completed the box selection");
         Thread.sleep(500);
