@@ -54,7 +54,7 @@ public class addProjectProperty extends MainMethods{
         clickandsend(By.name("no_of_pool"),pool);
         String elev  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 11));
         clickandsend(By.name("elevator"),elev);
-        doubleClick(By.xpath("//div[normalize-space()=\"currency\"]"),By.xpath("//li[normalize-space()=\"AED\"]"));
+        doubleClick(By.xpath("//div[normalize-space()=\"currency\"]"),By.xpath("//li[@data-value='1']"));
         clickandsend(By.name("service_charge"),ServiceCharge);
         doubleClick(By.xpath("//div[normalize-space()=\"measure\"]"),By.xpath("//li[normalize-space()=\"sqft\"]"));
         scrollPage(650);

@@ -115,9 +115,9 @@ public class AddProjectOffPlan extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),"SINGLE PHASE FULL DATA "+selectedProject);
-        clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
-        clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
+        clickandsend(By.name("project_name"),"SINGLE PHASE FULL DATA "+selectedProject +" "+ projectRan);
+        clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits+"12");
+        clickandsend(By.name("project_no"),"PROJECTNO"+projectRan+"12");
         clickandsend(By.name("starting_price"),StartingPrice);
         doubleClick(By.xpath("//input[@placeholder='Developer Company']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomPosition+"]"));
         doubleClick(By.xpath("//input[@placeholder='Select Country']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
@@ -144,7 +144,8 @@ public class AddProjectOffPlan extends MainMethods{
         Thread.sleep(250);
         click(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[12]/div/div/div/div[2]/button"));
         click(By.xpath("//button[normalize-space()=\"31\"]"));
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[1]/div/div"),By.xpath("//li[normalize-space()=\"AED\"]"));
+        Thread.sleep(250);
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[13]/div/div/div/div[1]/div/div"),By.xpath("//li[@data-value='1']"));
     }
     @Test(priority = 3)
     public void PoolyGoon() throws InterruptedException {
