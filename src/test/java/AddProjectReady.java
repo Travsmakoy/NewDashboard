@@ -124,9 +124,9 @@ public class AddProjectReady extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),"SINGLE PHASE FULL DATA "+selectedProject);
-        clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
-        clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
+        clickandsend(By.name("project_name"),"SINGLE PHASE FULL DATA "+selectedProject +" "+projectRan);
+        clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits+"1");
+        clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits+"1");
         clickandsend(By.name("starting_price"),StartingPrice);
         doubleClick(By.xpath("//input[@placeholder='Developer Company']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomPosition+"]"));
         doubleClick(By.xpath("//input[@placeholder='Select Country']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
@@ -148,7 +148,7 @@ public class AddProjectReady extends MainMethods{
         click(By.xpath("//button[normalize-space()=\"31\"]"));
         Thread.sleep(300);
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[2]/button"),By.xpath("//button[normalize-space()=\"30\"]"));
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[1]/div/div"),By.xpath("//li[normalize-space()=\"AED\"]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[1]/div/div"),By.xpath("//li[@data-value='15']"));
         clickandsend(By.name("service_charge"),ServiceCharge);
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[11]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
     }
