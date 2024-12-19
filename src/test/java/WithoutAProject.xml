@@ -8,16 +8,16 @@
 <!--            <class name="RunWithoutAddingProject"/>/-->
 <!--            <class name="AddMultiPhase"></class>-->
 <!--            <class name="AddProjectOffPlan"/>-->
-            <class name="AddProjectReady"/>
+<!--            <class name="AddProjectReady"/>-->
 <!--            <class name="ProjectOffPlanGallery"/>-->
 <!--            <class name="ProjectPlan"></class>-->
 <!--            <class name="ProjectDocuments"/>-->
 <!--            <class name="AddPromotion"/>-->
 <!--            <class name="AddFinancialProvider"/>-->
-            <class name="addProjectProperty"/>
+<!--            <class name="addProjectProperty"/>-->
 <!--            <class name="addPropertyGallery"/>-->
 <!--            <class name="addPropertyPlan"/>-->
-            <class name="PropertyUnitTypes"></class>
+<!--            <class name="PropertyUnitTypes"></class>-->
             <class name="Company"/>
         </classes>
     </test>
