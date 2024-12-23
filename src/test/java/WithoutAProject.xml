@@ -5,10 +5,10 @@
         <classes>
             <class name="VerifyDashboard"/>
             <class name="Login"/>
-            <class name="RunWithoutAddingProject"/>/
-            <class name="AddMultiPhase"></class>
+<!--            <class name="RunWithoutAddingProject"/>/-->
+<!--            <class name="AddMultiPhase"></class>-->
 <!--            <class name="AddProjectOffPlan"/>-->
-<!--            <class name="AddProjectReady"/>-->
+            <class name="AddProjectReady"/>
 <!--            <class name="ProjectOffPlanGallery"/>-->
 <!--            <class name="ProjectPlan"></class>-->
 <!--            <class name="ProjectDocuments"/>-->

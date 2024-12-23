@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class AddProjectOffPlan extends MainMethods{
     int projectRan = ThreadLocalRandom.current().nextInt(1, 98756132);
-    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
+    int licenseNoDigits = ThreadLocalRandom.current().nextInt(1, 99999);
     int projectNoDigits = ThreadLocalRandom.current().nextInt(1, 999);
     String StartingPrice = String.valueOf(ThreadLocalRandom.current().nextInt(100000, 9999999));
     String BuiltArea = String.valueOf(ThreadLocalRandom.current().nextInt(5000, 10000));
@@ -24,6 +24,7 @@ public class AddProjectOffPlan extends MainMethods{
     String randomSub  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3));
     String furn  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 4));
     String intran  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 5));
+
 
     @Test(priority = 1)
     public void NavigateToNav(){
@@ -115,7 +116,7 @@ public class AddProjectOffPlan extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),"OFFPLAN December 20, 2024 "+selectedProject);
+        clickandsend(By.name("project_name"),"OFFPLAN December 23, 2024 "+selectedProject);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits+"12");
         clickandsend(By.name("project_no"),"PROJECTNO"+projectRan+"12");
         clickandsend(By.name("starting_price"),StartingPrice);

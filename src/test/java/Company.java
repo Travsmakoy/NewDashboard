@@ -17,6 +17,7 @@ public class Company extends MainMethods {
     String VAT  = String.valueOf(ThreadLocalRandom.current().nextInt(999999, 99999999));
     String IBAN  = String.valueOf(ThreadLocalRandom.current().nextInt(1,999 ));
     @Test(priority = 1)
+
     public void NavigateToNav() {
         click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
         click(By.xpath("//span[normalize-space()=\"Company\"]"));
