@@ -19,8 +19,8 @@ public class Login extends MainMethods {
 //    }
     @Test(priority = 4)
     public void EnterValidUser() throws InterruptedException {
-        clickandsend(By.xpath("//input[@id=\":r0:\"]"),"admin");
-        clickandsend(By.xpath("//input[@id=\":r1:\"]"),"newadmin");
+        clickandsend(By.xpath("//input[@id=\":r0:\"]"),"aldaradmin");
+        clickandsend(By.xpath("//input[@id=\":r1:\"]"),"123456");
         click(By.xpath("//button[normalize-space()=\"Sign In\"]"));
     }
 }
