@@ -6,7 +6,7 @@
             <class name="VerifyDashboard"/>
             <class name="Login"/>
 <!--            <class name="RunWithoutAddingProject"/>/-->
-            <class name="AddMultiPhase"></class>
+<!--            <class name="AddMultiPhase"></class>-->
 <!--            <class name="AddProjectOffPlan"/>-->
 <!--            <class name="AddProjectReady"/>-->
 <!--            <class name="ProjectOffPlanGallery"/>-->
@@ -19,7 +19,7 @@
 <!--            <class name="addPropertyPlan"/>-->
 <!--            <class name="PropertyUnitTypes"></class>-->
 <!--            <class name="Company"/>-->
-
+            <class name="PropertyHub"></class>
         </classes>
     </test>
 </suite>

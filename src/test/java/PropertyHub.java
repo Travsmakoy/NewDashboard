@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class PropertyHub extends MainMethods {
     String randomint = String.valueOf(ThreadLocalRandom.current().nextInt(2,5));
-    String randomint1 = String.valueOf(ThreadLocalRandom.current().nextInt(1,4));
+    String randomint1 = String.valueOf(ThreadLocalRandom.current().nextInt(1,3));
     String randomint3 = String.valueOf(ThreadLocalRandom.current().nextInt(1,2));
     String randomint4 = String.valueOf(ThreadLocalRandom.current().nextInt(1,999999));
     String randomCom  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
@@ -26,7 +26,7 @@ public class PropertyHub extends MainMethods {
     }
     @Test(priority = 2)
     public void AddProperty(){
-        doubleClick(By.xpath("//input[@placeholder='Please Select Company Type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint+"]"));
+        clickandsend(By.name("property_name"),"TestProperty"+randomint3);
         doubleClick(By.xpath("//input[@placeholder='Choose Category']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint1+"]"));
         doubleClick(By.xpath("//input[@placeholder='Choose a company activity']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint3+"]"));
         clickandsend(By.name("property_name"),"PROPERTY AUTOMATION - "+randomint4);
