@@ -70,7 +70,66 @@ public class PropertyHub extends MainMethods {
         clickandsend(By.name("service_charge"),IBAN);
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
         clickandsend(By.name("price"),price);
+        scrollPage(500);
 
+        String[] array = {
+                "luxury", "apartment", "spacious", "modern", "residence", "prime location", "city view", "beachfront",
+                "amenities", "garden", "balcony", "terrace", "high-rise", "cozy", "family-friendly", "community",
+                "elegant", "conveniently located", "open plan", "stylish", "high-end finishes", "affordable",
+                "move-in ready", "renovated", "close to schools", "shopping centers", "parking", "garage", "fitness center",
+                "swimming pool", "security", "gated community", "prestigious", "investment opportunity", "penthouse",
+                "exclusive", "new development", "sunny", "natural light", "beautiful landscape", "tranquil", "executive",
+                "custom-built", "walk-in closet", "green spaces", "high ceilings", "luxurious", "vibrant neighborhood",
+                "city center", "affordable housing", "home office", "open kitchen", "spacious layout", "pet-friendly",
+                "storage space", "understated elegance", "state-of-the-art", "home theater", "entertainment area",
+                "double-glazed windows", "well-maintained", "furnished", "large windows", "ideal location", "central air",
+                "family room", "breakfast nook", "private", "master suite", "separate laundry", "energy efficient",
+                "multi-story", "fireplace", "vaulted ceilings", "cul-de-sac", "premium", "nature trails",
+                "easy commute", "historic", "charm", "bay windows", "skylights", "upgraded kitchen", "hardwood floors",
+                "ceramic tiles", "stainless steel appliances", "walkable", "dual sinks", "climate-controlled",
+                "panoramic views", "marble counters", "granite countertops", "convenient access"
+        };
+
+        String randomString = generateRandomString(array, 50);
+
+        // Call clickandsend to send the random string
+        clickandsend(By.name("title"), randomString);
+        String realEstateDescription = "This beautifully designed 2-bedroom apartment offers modern living with stunning views of the city skyline. Located in the heart of the vibrant downtown area, this apartment features spacious living areas, high-end finishes, and large windows that fill the space with natural light. The fully equipped kitchen boasts state-of-the-art appliances, while the master bedroom comes with an ensuite bathroom. Residents enjoy access to premium amenities, including a rooftop pool, fully equipped fitness center, and 24/7 security. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience";
+
+        WebElement descriptionField = driver.findElement(By.xpath("//textarea[@name='description']"));descriptionField.sendKeys(realEstateDescription);
+        scrollPage(500);
+    }
+    @Test(priority = 5)
+    public void AmenitiesFacilities() throws InterruptedException {
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[1]/ul/li[2]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[2]/ul/li[3]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[3]/ul/li[1]"));
+        scrollPage(500);
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[4]/ul/li[1]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[5]/div/div[2]/div/div[5]/ul/li"));
+        scrollPage(500);
+        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[4]/ul/li[1]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[6]/ul/li[3]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[9]/ul/li[1]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[6]/div/div[2]/div/div[13]/ul/li[5]"));
+        click(By.xpath("/html/body/div[2]/main/form/div[7]/div/button[1]"));
     }
 
+    public static String generateRandomString(String[] array, int targetLength) {
+        Random random = new Random();
+        StringBuilder result = new StringBuilder();
+
+        while (result.length() < targetLength) {
+            // Randomly pick a word from the array
+            String word = array[random.nextInt(array.length)];
+
+            // Check if adding this word would exceed the target length
+            if (result.length() + word.length() <= targetLength) {
+                result.append(word).append(" "); // Append the word with a space
+            }
+        }
+
+        // Trim any trailing space and return the result
+        return result.toString().trim();
+    }
 }
