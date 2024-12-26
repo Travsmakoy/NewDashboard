@@ -21,6 +21,8 @@ public class PropertyHub extends MainMethods {
     String IBAN  = String.valueOf(ThreadLocalRandom.current().nextInt(1,999 ));
     String SECTOR  = String.valueOf(ThreadLocalRandom.current().nextInt(1,999 ));
     String price  = String.valueOf(ThreadLocalRandom.current().nextInt(1,999999 ));
+    String randomfur  = String.valueOf(ThreadLocalRandom.current().nextInt(1,4 ));
+
     @Test(priority = 1)
 
     public void NavigateToNav() {
@@ -149,25 +151,48 @@ public class PropertyHub extends MainMethods {
         scrollPage(500);
         doubleClick(
                 By.xpath("//input[@placeholder='Select Property type']"),
-                By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and (position()=5 or position()=6)]")
+                By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and (position()=4 or position()=4)]")
         );
-        doubleClick(By.xpath("//input[@placeholder='Select Unit type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        int loop2  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 6)));
+        for (int i = 0; i < loop2; i++) {
+            String typex  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 7));
+            doubleClick(By.xpath("//input[@placeholder='Select Unit type']"), By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + typex + "]"));
+        }
         clickandsend(By.name("plot_area"),randomint4);
         clickandsend(By.name("built_up_area"),randomint5);
         clickandsend(By.name("sector_no"),"SECTOR "+SECTOR);
         clickandsend(By.name("property_no"),IBAN);
-        int loop1  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 10)));
+        String randommin  = String.valueOf(ThreadLocalRandom.current().nextInt(1,9999 ));
+        String randommax  = String.valueOf(ThreadLocalRandom.current().nextInt(9999,99999 ));
+        String nounit  = String.valueOf(ThreadLocalRandom.current().nextInt(9999,99999 ));
+        String floors  = String.valueOf(ThreadLocalRandom.current().nextInt(1,999 ));
+        String parking  = String.valueOf(ThreadLocalRandom.current().nextInt(1,50 ));
+        String pools  = String.valueOf(ThreadLocalRandom.current().nextInt(1,50 ));
+        String elevetaor  = String.valueOf(ThreadLocalRandom.current().nextInt(1,50 ));
+        clickandsend(By.name("min_area"),randommin);
+        clickandsend(By.name("max_area"),randommax);
+        clickandsend(By.name("no_of_units"),nounit);
+        clickandsend(By.name("no_of_parking"),parking);
+        clickandsend(By.name("no_of_floors"),floors);
+        clickandsend(By.name("no_of_pools"),pools);
+        clickandsend(By.name("no_of_elevators"),elevetaor);
+        String randomlife  = String.valueOf(ThreadLocalRandom.current().nextInt(1,3 ));
+
+        doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomlife+"]"));
+        int loop1  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 60)));
         for (int i = 0; i < loop1; i++) {
-            String typesss  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 50));
-            doubleClick(By.xpath("//input[@placeholder='Select Views']"), By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + typesss + "]"));
+            String typessss  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 30));
+            doubleClick(By.xpath("//input[@placeholder='Select Views']"), By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + typessss + "]"));
         }
+        doubleClick(By.xpath("//input[@placeholder='Select Furnished']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomfur+"]"));
         doubleClick(By.xpath("//input[@placeholder='Select Ownership']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint+"]"));
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[1]/div/div"),By.xpath("//li[@data-value='1']"));
         clickandsend(By.name("service_charge"),IBAN);
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
         clickandsend(By.name("price"),price);
+        Thread.sleep(1500);
         scrollPage(500);
-        Thread.sleep(1000);
+
 
         String[] array = {
                 "luxury", "apartment", "spacious", "modern", "residence", "prime location", "city view", "beachfront",
