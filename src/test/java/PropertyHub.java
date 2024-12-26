@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -32,6 +33,18 @@ public class PropertyHub extends MainMethods {
     public void AddProperty(){
         clickandsend(By.name("property_name"),"MARK FULL PROPERTY "+randomint3);
         doubleClick(By.xpath("//input[@placeholder='Choose category']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint1+"]"));
+        WebElement mark = driver.findElement(By.xpath("//input[@placeholder='Broker Agent']"));
+        mark.sendKeys("Kashif");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@role='listbox']")));
+
+        // Step 3: Select the first option from the dropdown
+        WebElement firstOption = driver.findElement(By.xpath("//ul[@role='listbox']//li[1]"));
+        firstOption.click();  // Click on the first option in the dropdown
+
+        clickandsend(By.xpath("//input[@placeholder='Search by name or number']"),"Ali");
+        WebElement secondOption = driver.findElement(By.xpath("//ul[@role='listbox']//li[1]"));
+        secondOption.click();  // Click on the first option in the dropdown
 
     }
     @Test(priority = 3)
@@ -71,6 +84,7 @@ public class PropertyHub extends MainMethods {
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
         clickandsend(By.name("price"),price);
         scrollPage(500);
+        Thread.sleep(1000);
 
         String[] array = {
                 "luxury", "apartment", "spacious", "modern", "residence", "prime location", "city view", "beachfront",
@@ -91,7 +105,6 @@ public class PropertyHub extends MainMethods {
         };
 
         String randomString = generateRandomString(array, 50);
-
         // Call clickandsend to send the random string
         clickandsend(By.name("title"), randomString);
         String realEstateDescription = "This beautifully designed 2-bedroom apartment offers modern living with stunning views of the city skyline. Located in the heart of the vibrant downtown area, this apartment features spacious living areas, high-end finishes, and large windows that fill the space with natural light. The fully equipped kitchen boasts state-of-the-art appliances, while the master bedroom comes with an ensuite bathroom. Residents enjoy access to premium amenities, including a rooftop pool, fully equipped fitness center, and 24/7 security. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience";
