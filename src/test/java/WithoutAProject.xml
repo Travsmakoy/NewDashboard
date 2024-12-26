@@ -23,6 +23,7 @@
             <class name="PropertyHubGal"></class>
             <class name="PropertyHubDoc"></class>
             <class name="PropertyHubPlan"></class>
+            <class name="HubUnitType"></class>
             <class name="PropertyHubPaymentPlan"></class>
         </classes>
     </test>
