@@ -116,7 +116,7 @@ public class AddProjectOffPlan extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),"OFFPLAN December 23, 2024 "+selectedProject);
+        clickandsend(By.name("project_name"),"MARK OFFPLAN December 26, 2024 "+selectedProject);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits+"12");
         clickandsend(By.name("project_no"),"PROJECTNO"+projectRan+"12");
         clickandsend(By.name("starting_price"),StartingPrice);

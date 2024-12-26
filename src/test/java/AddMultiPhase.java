@@ -123,7 +123,7 @@ public class AddMultiPhase extends MainMethods{
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("project_name"),"MULTIPHASE December 23, 2024 "+selectedProject);
+        clickandsend(By.name("project_name"),"MARK MULTIPHASE December 26, 2024 "+selectedProject);
         clickandsend(By.name("license_no"),"LICENSENO"+licenseNoDigits);
         clickandsend(By.name("project_no"),"PROJECTNO"+projectNoDigits);
         clickandsend(By.name("starting_price"),StartingPrice);
