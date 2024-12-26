@@ -25,7 +25,7 @@ public class MainMethods {
     public void setUpSuite() {
         driver = new EdgeDriver();
 //        driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
     @AfterSuite
     public void tearDownSuite() throws InterruptedException, IOException {

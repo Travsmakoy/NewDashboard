@@ -116,7 +116,7 @@ public class PropertyHub extends MainMethods {
         int randomIndex = random.nextInt(projects.length);
         String selectedProject = projects[randomIndex];
 
-        clickandsend(By.name("property_name"),"MARK "+selectedProject);
+        clickandsend(By.name("property_name"),selectedProject);
         doubleClick(By.xpath("//input[@placeholder='Choose category']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint1+"]"));
         WebElement mark = driver.findElement(By.xpath("//input[@placeholder='Broker Agent']"));
         mark.sendKeys("Kashif");
