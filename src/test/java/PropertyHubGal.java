@@ -14,7 +14,7 @@ public class PropertyHubGal extends MainMethods {
     }
     @Test(priority = 2)
     public void AddProjectPropertyGallery() throws InterruptedException {
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 11; i++) {
             click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[1]/div[3]/div[1]/button[1]"));
             String randomint = String.valueOf(ThreadLocalRandom.current().nextInt(1, 6));
             doubleClick(By.xpath("//input[@placeholder='Select Gallery Type']"), By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + randomint + "]"));
