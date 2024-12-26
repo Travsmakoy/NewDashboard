@@ -22,6 +22,8 @@ public class PropertyHubPaymentPlan extends MainMethods{
         mile.sendKeys("THIS IS TEST");
 
         click(By.xpath("/html/body/div[2]/main/form/div[2]/button[1]"));
-
+        click(By.xpath("/html/body/div[2]/main/form/div[2]/button[1]"));
+        WebElement asd = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/form/div/div/div[2]/div/div[4]/div/div[2]/a")));
+        asd.click();
     }
 }

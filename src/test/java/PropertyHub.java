@@ -153,7 +153,7 @@ public class PropertyHub extends MainMethods {
                 By.xpath("//input[@placeholder='Select Property type']"),
                 By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and (position()=4 or position()=4)]")
         );
-        int loop2  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 6)));
+        int loop2  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(3, 6)));
         for (int i = 0; i < loop2; i++) {
             String typex  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 7));
             doubleClick(By.xpath("//input[@placeholder='Select Unit type']"), By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + typex + "]"));
@@ -185,7 +185,7 @@ public class PropertyHub extends MainMethods {
         Thread.sleep(500);
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[19]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[4]/button[5]"));
         doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=2]"));
-        int loop1  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 10)));
+        int loop1  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(4, 11)));
         for (int i = 0; i < loop1; i++) {
             String typessss  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 30));
             doubleClick(By.xpath("//input[@placeholder='Select Views']"), By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + typessss + "]"));
