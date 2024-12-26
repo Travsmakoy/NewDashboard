@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -13,7 +15,7 @@ public class HubUnitType extends MainMethods{
     }
     @Test(priority = 2)
     public void AddDetails(){
-        doubleClick(By.xpath("//input[@placeholder='Select Unit Type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
+        doubleClick(By.xpath("//input[@placeholder='Select unit type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         String[] unitTypes = {
                 "Studio", "1 BR", "2 BR", "3 BR", "4 BR", "5 BR"
         };
@@ -35,7 +37,23 @@ public class HubUnitType extends MainMethods{
         clickandsend(By.name("bedrooms"),bedroom);
         clickandsend(By.name("parkings"),park);
 
-        click(By.xpath("/html/body/div[2]/main/form/div[2]/button[1]"));
+        String folderPath = "D:\\Mark OneDrive\\OneDrive - aqary international group\\Desktop\\IMAGES FOR AUTO\\UNIT TYPES";
+        File folder = new File(folderPath);
 
+        File[] files = folder.listFiles();
+
+        if (files == null || files.length == 0) {
+            System.out.println("No files found in the folder!");
+            return;
+        }
+        Random random1 = new Random();
+        File randomFile = files[random1.nextInt(files.length)];
+        String filePath = randomFile.getAbsolutePath();
+
+        WebElement fileInput = driver.findElement(By.xpath("//input[@type=\"file\"]"));
+
+        fileInput.sendKeys(filePath);
+        click(By.xpath("/html/body/div[2]/main/form/div[2]/button[1]"));
+        click(By.xpath("/html/body/div[2]/main/div/div/div[1]/div/a"));
     }
 }
