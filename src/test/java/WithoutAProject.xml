@@ -20,7 +20,10 @@
 <!--            <class name="PropertyUnitTypes"></class>-->
 <!--            <class name="Company"/>-->
             <class name="PropertyHub"></class>
-<!--            <class name="PropertyHubGallery"></class>-->
+            <class name="PropertyHubGal"></class>
+            <class name="PropertyHubDoc"></class>
+            <class name="PropertyHubPlan"></class>
+            <class name="PropertyHubPaymentPlan"></class>
         </classes>
     </test>
 </suite>
