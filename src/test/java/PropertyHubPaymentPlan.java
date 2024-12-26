@@ -15,6 +15,6 @@ public class PropertyHubPaymentPlan extends MainMethods{
         clickandsend(By.name("plans.0.payments.0.milestone"),"THIS IS RANDOM TEST DATA");
         click(By.xpath("/html/body/div[2]/main/form/div[2]/button[1]"));
         click(By.xpath("/html/body/div[2]/main/form/div[2]/button[1]"));
-        click(By.xpath("/html/body/div[2]/main/form/div/div/div[2]/div/div[4]/div/div[2]/a"));
+        driver.findElement(By.xpath("/html/body/div[2]/main/form/div/div/div[2]/div/div[4]/div/div[2]/a")).click();
     }
 }

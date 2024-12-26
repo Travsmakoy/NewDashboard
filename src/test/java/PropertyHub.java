@@ -179,17 +179,24 @@ public class PropertyHub extends MainMethods {
         String randomlife  = String.valueOf(ThreadLocalRandom.current().nextInt(1,3 ));
 
         doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomlife+"]"));
-        int loop1  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 60)));
+
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[17]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/button[1]"));
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[18]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/button[3]"));
+        Thread.sleep(500);
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[19]/div/div/div/div[2]/button"),By.xpath("/html/body/div[3]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[4]/button[5]"));
+        doubleClick(By.xpath("//input[@placeholder='Select Completion Status']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=2]"));
+        int loop1  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 10)));
         for (int i = 0; i < loop1; i++) {
             String typessss  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 30));
             doubleClick(By.xpath("//input[@placeholder='Select Views']"), By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + typessss + "]"));
         }
         doubleClick(By.xpath("//input[@placeholder='Select Furnished']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomfur+"]"));
         doubleClick(By.xpath("//input[@placeholder='Select Ownership']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint+"]"));
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[1]/div/div"),By.xpath("//li[@data-value='1']"));
+        Thread.sleep(500);
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[22]/div/div/div/div[1]/div/div"),By.xpath("//li[@data-value='1']"));
         clickandsend(By.name("service_charge"),IBAN);
-        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[9]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
-        clickandsend(By.name("price"),price);
+        doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[22]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
+        clickandsend(By.xpath("//input[@placeholder='Enter Price' and @name='price']"),price);
         Thread.sleep(1500);
         scrollPage(500);
 
