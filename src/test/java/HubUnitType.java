@@ -11,10 +11,11 @@ public class HubUnitType extends MainMethods{
     public void GotoUnitType(){
         click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[16]/div/button[6]"));
         click(By.xpath("//*[@id=\"actions-popover\"]/div[3]/div[5]/a"));
-        click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[1]/div[3]/a/button"));
     }
     @Test(priority = 2)
-    public void AddDetails(){
+    public void AddDetails() throws InterruptedException {
+        Thread.sleep(200);
+        click(By.xpath("/html/body/div[2]/main/div/div/div[2]/div/div[1]/div[3]/a/button"));
         doubleClick(By.xpath("//input[@placeholder='Select unit type']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=1]"));
         String[] unitTypes = {
                 "Studio", "1 BR", "2 BR", "3 BR", "4 BR", "5 BR"

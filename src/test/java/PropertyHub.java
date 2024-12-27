@@ -151,13 +151,16 @@ public class PropertyHub extends MainMethods {
         scrollPage(500);
         doubleClick(
                 By.xpath("//input[@placeholder='Select Property type']"),
-                By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and (position()=12 or position()=12)]")
+                By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and (position()=4 or position()=4)]")
+
+//                4 - COMMERCIAL BUILDING
+//                12 - RESIDENTIAL BUILDING
         );
-        int loop2  = 5;
+        int loop2  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 5)));;
 //        Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 3)));
 
         for (int i = 0; i < loop2; i++) {
-            String typex  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 4));
+            String typex  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 7));
             doubleClick(By.xpath("//input[@placeholder='Select Unit type']"), By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + typex + "]"));
         }
         clickandsend(By.name("plot_area"),randomint4);
