@@ -149,18 +149,24 @@ public class PropertyHub extends MainMethods {
     @Test(priority = 4)
     public void AddDetails() throws InterruptedException {
         scrollPage(500);
+        int[] Droppers = {  4, 5, 7, 12 };
+        Random randomDrop = new Random();
+        int randomIndexes = randomDrop.nextInt(Droppers.length);
+        int selectedDROP = Droppers[randomIndexes];
+        System.out.println("Selected Project ID: " + selectedDROP);
+
         doubleClick(
                 By.xpath("//input[@placeholder='Select Property type']"),
-                By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and (position()=4 or position()=4)]")
+                By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + selectedDROP + "]")
 
 //                4 - COMMERCIAL BUILDING
 //                12 - RESIDENTIAL BUILDING
         );
-        int loop2  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 5)));;
+        int loop2  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 10)));;
 //        Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 3)));
 
         for (int i = 0; i < loop2; i++) {
-            String typex  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 7));
+            String typex  = String.valueOf(ThreadLocalRandom.current().nextInt(1, 4));
             doubleClick(By.xpath("//input[@placeholder='Select Unit type']"), By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()=" + typex + "]"));
         }
         clickandsend(By.name("plot_area"),randomint4);
