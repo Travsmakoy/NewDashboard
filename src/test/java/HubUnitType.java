@@ -38,14 +38,10 @@ public class HubUnitType extends MainMethods{
         clickandsend(By.name("max_area"),MAX);
         clickandsend(By.name("min_price"),MINprice);
         clickandsend(By.name("max_price"),MAXprice);
-        WebDriverWait waitz = new WebDriverWait(driver, Duration.ofSeconds(5));
-        WebElement bedroomsElement = waitz.until(ExpectedConditions.elementToBeClickable(By.name("bedrooms")));
-
-        // Click the element
-        bedroomsElement.click();
-
-        // Send the bedroom value
-        bedroomsElement.sendKeys(bedroom);
+//        WebDriverWait waitz = new WebDriverWait(driver, Duration.ofSeconds(5));
+//        WebElement bedroomsElement = waitz.until(ExpectedConditions.elementToBeClickable(By.name("bedrooms")));
+//        bedroomsElement.click();
+//        bedroomsElement.sendKeys(bedroom);
 
         Thread.sleep(200);
         clickandsend(By.name("parkings"),park);

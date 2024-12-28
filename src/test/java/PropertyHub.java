@@ -32,7 +32,7 @@ public class PropertyHub extends MainMethods {
         click(By.xpath("//button[@aria-label=\"open drawer\"]//*[name()=\"svg\"]"));
     }
     @Test(priority = 2)
-    public void AddProperty(){
+    public void AddProperty() throws InterruptedException {
         String[] projects = {
                 "Burj Khalifa Residences", "Palm Jumeirah Villas", "Jumeirah Beach Apartments",
                 "Downtown Dubai Towers", "Business Bay Heights", "Dubai Marina Skyrise",
@@ -126,7 +126,7 @@ public class PropertyHub extends MainMethods {
         // Step 3: Select the first option from the dropdown
         WebElement firstOption = driver.findElement(By.xpath("//ul[@role='listbox']//li[1]"));
         firstOption.click();  // Click on the first option in the dropdown
-
+        Thread.sleep(200);
         clickandsend(By.xpath("//input[@placeholder='Search by name or number']"),"Ali");
         WebElement secondOption = driver.findElement(By.xpath("//ul[@role='listbox']//li[1]"));
         secondOption.click();  // Click on the first option in the dropdown
@@ -149,7 +149,8 @@ public class PropertyHub extends MainMethods {
     @Test(priority = 4)
     public void AddDetails() throws InterruptedException {
         scrollPage(500);
-        int[] Droppers = {  4, 5, 7, 12 };
+        Thread.sleep(300);
+        int[] Droppers = {  12, 5, 9, 4 };
         Random randomDrop = new Random();
         int randomIndexes = randomDrop.nextInt(Droppers.length);
         int selectedDROP = Droppers[randomIndexes];
@@ -162,7 +163,7 @@ public class PropertyHub extends MainMethods {
 //                4 - COMMERCIAL BUILDING
 //                12 - RESIDENTIAL BUILDING
         );
-        int loop2  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 10)));;
+        int loop2  = Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 3)));;
 //        Integer.parseInt(String.valueOf(ThreadLocalRandom.current().nextInt(1, 3)));
 
         for (int i = 0; i < loop2; i++) {
@@ -187,7 +188,7 @@ public class PropertyHub extends MainMethods {
         clickandsend(By.name("no_of_floors"),floors);
         clickandsend(By.name("no_of_pools"),pools);
         clickandsend(By.name("no_of_elevators"),elevetaor);
-        String randomlife  = String.valueOf(ThreadLocalRandom.current().nextInt(1,3 ));
+        String randomlife = String.valueOf(ThreadLocalRandom.current().nextInt(2) + 1);
 
         doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomlife+"]"));
 
@@ -207,11 +208,10 @@ public class PropertyHub extends MainMethods {
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[22]/div/div/div/div[1]/div/div"),By.xpath("//li[@data-value='1']"));
         clickandsend(By.name("service_charge"),IBAN);
         doubleClick(By.xpath("/html/body/div[2]/main/form/div[3]/div/div[2]/div/div[22]/div/div/div/div[2]/div/div"),By.xpath("//li[normalize-space()=\"sqft\"]"));
+        Thread.sleep(300);
         clickandsend(By.xpath("//input[@placeholder='Enter Price' and @name='price']"),price);
-        Thread.sleep(1500);
-        scrollPage(500);
 
-
+        scrollPage(750);
         String[] array = {
                 "luxury", "apartment", "spacious", "modern", "residence", "prime location", "city view", "beachfront",
                 "amenities", "garden", "balcony", "terrace", "high-rise", "cozy", "family-friendly", "community",
@@ -232,6 +232,7 @@ public class PropertyHub extends MainMethods {
 
         String randomString = generateRandomString(array, 50);
         // Call clickandsend to send the random string
+        Thread.sleep(1000);
         clickandsend(By.name("title"), randomString);
         String realEstateDescription = "This beautifully designed 2-bedroom apartment offers modern living with stunning views of the city skyline. Located in the heart of the vibrant downtown area, this apartment features spacious living areas, high-end finishes, and large windows that fill the space with natural light. The fully equipped kitchen boasts state-of-the-art appliances, while the master bedroom comes with an ensuite bathroom. Residents enjoy access to premium amenities, including a rooftop pool, fully equipped fitness center, and 24/7 security. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience. Perfectly situated near shopping centers, restaurants, and public transport, this apartment is a must-see for those seeking both luxury and convenience";
 
