@@ -188,7 +188,8 @@ public class PropertyHub extends MainMethods {
         clickandsend(By.name("no_of_floors"),floors);
         clickandsend(By.name("no_of_pools"),pools);
         clickandsend(By.name("no_of_elevators"),elevetaor);
-        String randomlife = String.valueOf(ThreadLocalRandom.current().nextInt(2) + 1);
+        String randomlife = String.valueOf(ThreadLocalRandom.current().nextInt(1, 3)); // Generates 1 or 2
+
 
         doubleClick(By.xpath("//input[@placeholder='Select Life Style']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomlife+"]"));
 
