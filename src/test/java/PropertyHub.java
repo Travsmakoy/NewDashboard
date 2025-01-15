@@ -120,10 +120,7 @@ public class PropertyHub extends MainMethods {
         doubleClick(By.xpath("//input[@placeholder='Choose category']"),By.xpath("//li[contains(@class, 'MuiAutocomplete-option') and position()="+randomint1+"]"));
         WebElement mark = driver.findElement(By.xpath("//input[@placeholder='Broker Agent']"));
         mark.sendKeys("Kashif");
-
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@role='listbox']")));
-
-        // Step 3: Select the first option from the dropdown
         WebElement firstOption = driver.findElement(By.xpath("//ul[@role='listbox']//li[1]"));
         firstOption.click();  // Click on the first option in the dropdown
         Thread.sleep(200);
