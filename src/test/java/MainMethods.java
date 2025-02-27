@@ -52,6 +52,7 @@ public class MainMethods {
     public void getUrl(String value) {
         driver.get(value);
     }
+
     public void clickandsend(By locator, String value){
         WebElement clickandsending = wait.until(ExpectedConditions.elementToBeClickable(locator));
         clickandsending.click();
