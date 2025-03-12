@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+
 public class Login extends MainMethods {
     @Test(priority = 1)
     public void Login() {
@@ -24,5 +26,10 @@ public class Login extends MainMethods {
 //        clickandsend(By.xpath("//input[@id=\":r0:\"]"),"aqary@aqaryinvestment.com");
 //        clickandsend(By.xpath("//input[@id=\":r1:\"]"),"123456");
         click(By.xpath("//button[normalize-space()=\"Sign In\"]"));
+
+//        LIST WINDOW HANDLES
+//        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(tabs.get(1));
+
     }
 }
