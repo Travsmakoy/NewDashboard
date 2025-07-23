@@ -30,6 +30,5 @@ public class Login extends MainMethods {
 //        LIST WINDOW HANDLES
 //        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 //        driver.switchTo().window(tabs.get(1));
-
     }
 }
