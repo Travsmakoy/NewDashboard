@@ -1,57 +1,982 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="26" passed="0" failed="0" skipped="26">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-30T14:23:03 GST" name="Suite" finished-at="2024-12-30T14:23:20 GST" duration-ms="16450">
+  <suite started-at="2025-11-17T14:33:29 GST" name="Suite" finished-at="2025-11-17T14:33:29 GST" duration-ms="35">
     <groups>
     </groups>
-    <test started-at="2024-12-30T14:23:03 GST" name="Test" finished-at="2024-12-30T14:23:20 GST" duration-ms="16450">
-      <class name="PropertyHub">
-        <test-method signature="NavigateToNav()[pri:1, instance:PropertyHub@6df2a206]" started-at="2024-12-30T14:23:05 GST" name="NavigateToNav" finished-at="2024-12-30T14:23:06 GST" duration-ms="1410" status="PASS">
+    <test started-at="2025-11-17T14:33:29 GST" name="Test" finished-at="2025-11-17T14:33:29 GST" duration-ms="35">
+      <class name="ProjectPlan">
+        <test-method signature="NavtoPlan()[pri:1, instance:ProjectPlan@4fbda97b]" started-at="2025-11-17T14:33:29 GST" name="NavtoPlan" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NavigateToNav -->
-        <test-method signature="AddProperty()[pri:2, instance:PropertyHub@6df2a206]" started-at="2024-12-30T14:23:06 GST" name="AddProperty" finished-at="2024-12-30T14:23:07 GST" duration-ms="1291" status="PASS">
+        </test-method> <!-- NavtoPlan -->
+        <test-method signature="UploadPlan()[pri:2, instance:ProjectPlan@4fbda97b]" started-at="2025-11-17T14:33:29 GST" name="UploadPlan" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddProperty -->
-        <test-method signature="location()[pri:3, instance:PropertyHub@6df2a206]" started-at="2024-12-30T14:23:07 GST" name="location" finished-at="2024-12-30T14:23:08 GST" duration-ms="1009" status="PASS">
+        </test-method> <!-- UploadPlan -->
+      </class> <!-- ProjectPlan -->
+      <class name="addPropertyGallery">
+        <test-method signature="NavToProjectPropertyGallery()[pri:1, instance:addPropertyGallery@12bcd0c0]" started-at="2025-11-17T14:33:29 GST" name="NavToProjectPropertyGallery" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- location -->
-        <test-method signature="AddDetails()[pri:4, instance:PropertyHub@6df2a206]" started-at="2024-12-30T14:23:08 GST" name="AddDetails" finished-at="2024-12-30T14:23:18 GST" duration-ms="10083" status="PASS">
+        </test-method> <!-- NavToProjectPropertyGallery -->
+        <test-method signature="AddProjectPropertyGallery()[pri:2, instance:addPropertyGallery@12bcd0c0]" started-at="2025-11-17T14:33:29 GST" name="AddProjectPropertyGallery" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddDetails -->
-        <test-method signature="AmenitiesFacilities()[pri:5, instance:PropertyHub@6df2a206]" started-at="2024-12-30T14:23:18 GST" name="AmenitiesFacilities" finished-at="2024-12-30T14:23:20 GST" duration-ms="1294" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AmenitiesFacilities -->
-      </class> <!-- PropertyHub -->
+        </test-method> <!-- AddProjectPropertyGallery -->
+      </class> <!-- addPropertyGallery -->
       <class name="VerifyDashboard">
-        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:VerifyDashboard@596afb2f]" started-at="2024-12-30T14:23:01 GST" name="setUpSuite" finished-at="2024-12-30T14:23:03 GST" duration-ms="2305" status="PASS">
+        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:VerifyDashboard@6f8f9349]" started-at="2025-11-17T14:33:27 GST" name="setUpSuite" finished-at="2025-11-17T14:33:29 GST" duration-ms="2016" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method signature="VerifyAqarySite()[pri:0, instance:VerifyDashboard@596afb2f]" started-at="2024-12-30T14:23:03 GST" name="VerifyAqarySite" finished-at="2024-12-30T14:23:04 GST" duration-ms="475" status="PASS">
+        <test-method signature="VerifyAqarySite()[pri:0, instance:VerifyDashboard@6f8f9349]" started-at="2025-11-17T14:33:29 GST" name="VerifyAqarySite" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyAqarySite -->
-        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:VerifyDashboard@596afb2f]" started-at="2024-12-30T14:23:20 GST" name="tearDownSuite" finished-at="2024-12-30T14:23:22 GST" duration-ms="2690" status="PASS">
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:VerifyDashboard@6f8f9349]" started-at="2025-11-17T14:33:29 GST" name="tearDownSuite" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSuite -->
       </class> <!-- VerifyDashboard -->
+      <class name="addProjectProperty">
+        <test-method signature="navtoAdd()[pri:1, instance:addProjectProperty@306851c7]" started-at="2025-11-17T14:33:29 GST" name="navtoAdd" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navtoAdd -->
+        <test-method signature="AddProperty()[pri:2, instance:addProjectProperty@306851c7]" started-at="2025-11-17T14:33:29 GST" name="AddProperty" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddProperty -->
+      </class> <!-- addProjectProperty -->
+      <class name="ProjectGallery">
+        <test-method signature="NavtoAdd()[pri:1, instance:ProjectGallery@5c3b6c6e]" started-at="2025-11-17T14:33:29 GST" name="NavtoAdd" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavtoAdd -->
+        <test-method signature="ProjectOffPlanGallery()[pri:2, instance:ProjectGallery@5c3b6c6e]" started-at="2025-11-17T14:33:29 GST" name="ProjectOffPlanGallery" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProjectOffPlanGallery -->
+      </class> <!-- ProjectGallery -->
+      <class name="addPropertyPlan">
+        <test-method signature="NavtoPropertyPlan()[pri:1, instance:addPropertyPlan@47db5fa5]" started-at="2025-11-17T14:33:29 GST" name="NavtoPropertyPlan" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavtoPropertyPlan -->
+        <test-method signature="UploadPlan()[pri:2, instance:addPropertyPlan@47db5fa5]" started-at="2025-11-17T14:33:29 GST" name="UploadPlan" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UploadPlan -->
+      </class> <!-- addPropertyPlan -->
       <class name="Login">
-        <test-method signature="Login()[pri:1, instance:Login@79ba0285]" started-at="2024-12-30T14:23:04 GST" name="Login" finished-at="2024-12-30T14:23:04 GST" duration-ms="593" status="PASS">
+        <test-method signature="Login()[pri:1, instance:Login@75c9e76b]" started-at="2025-11-17T14:33:29 GST" name="Login" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="EnterValidUser()[pri:4, instance:Login@79ba0285]" started-at="2024-12-30T14:23:04 GST" name="EnterValidUser" finished-at="2024-12-30T14:23:05 GST" duration-ms="285" status="PASS">
+        <test-method signature="EnterValidUser()[pri:4, instance:Login@75c9e76b]" started-at="2025-11-17T14:33:29 GST" name="EnterValidUser" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnterValidUser -->
       </class> <!-- Login -->
+      <class name="ProjectDocuments">
+        <test-method signature="NavtoDocument()[pri:1, instance:ProjectDocuments@75f5fd58]" started-at="2025-11-17T14:33:29 GST" name="NavtoDocument" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavtoDocument -->
+        <test-method signature="addDocuments()[pri:2, instance:ProjectDocuments@75f5fd58]" started-at="2025-11-17T14:33:29 GST" name="addDocuments" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDocuments -->
+      </class> <!-- ProjectDocuments -->
+      <class name="PropertyUnitTypes">
+        <test-method signature="GotoUnitTypes()[pri:1, instance:PropertyUnitTypes@4879f0f2]" started-at="2025-11-17T14:33:29 GST" name="GotoUnitTypes" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GotoUnitTypes -->
+        <test-method signature="addUnitTypes()[pri:2, instance:PropertyUnitTypes@4879f0f2]" started-at="2025-11-17T14:33:29 GST" name="addUnitTypes" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUnitTypes -->
+        <test-method signature="Description()[pri:3, instance:PropertyUnitTypes@4879f0f2]" started-at="2025-11-17T14:33:29 GST" name="Description" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Description -->
+      </class> <!-- PropertyUnitTypes -->
+      <class name="AddFinancialProvider">
+        <test-method signature="NavtoProjectFinancialProvider()[pri:1, instance:AddFinancialProvider@37b70343]" started-at="2025-11-17T14:33:29 GST" name="NavtoProjectFinancialProvider" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavtoProjectFinancialProvider -->
+        <test-method signature="addProvider()[pri:2, instance:AddFinancialProvider@37b70343]" started-at="2025-11-17T14:33:29 GST" name="addProvider" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProvider -->
+        <test-method signature="BackToList()[pri:3, instance:AddFinancialProvider@37b70343]" started-at="2025-11-17T14:33:29 GST" name="BackToList" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BackToList -->
+      </class> <!-- AddFinancialProvider -->
+      <class name="AddProjectReady">
+        <test-method signature="NavigateToNav()[pri:1, instance:AddProjectReady@7446d8d5]" started-at="2025-11-17T14:33:29 GST" name="NavigateToNav" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToNav -->
+        <test-method signature="AddProjectDetails()[pri:2, instance:AddProjectReady@7446d8d5]" started-at="2025-11-17T14:33:29 GST" name="AddProjectDetails" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddProjectDetails -->
+        <test-method signature="PoolyGoon()[pri:3, instance:AddProjectReady@7446d8d5]" started-at="2025-11-17T14:33:29 GST" name="PoolyGoon" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PoolyGoon -->
+        <test-method signature="Description()[pri:4, instance:AddProjectReady@7446d8d5]" started-at="2025-11-17T14:33:29 GST" name="Description" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Description -->
+        <test-method signature="AmenitiesFacilities()[pri:5, instance:AddProjectReady@7446d8d5]" started-at="2025-11-17T14:33:29 GST" name="AmenitiesFacilities" finished-at="2025-11-17T14:33:29 GST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable Unable to locate the chromedriver executable; for more information on how to install drivers, see https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:33)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+at MainMethods.setUpSuite(MainMethods.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at RUNNER.main(RUNNER.java:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AmenitiesFacilities -->
+      </class> <!-- AddProjectReady -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
